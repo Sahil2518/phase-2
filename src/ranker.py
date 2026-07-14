@@ -271,18 +271,53 @@ def score_pair(model: Any, mv: MatchVector) -> Tuple[float, dict]:
     """
     Predict relevance score for a (student, job) pair given a MatchVector.
 
+    This function acts as the core inference bridge. It converts the MatchVector 
+    into a flat dictionary, wraps it in a DataFrame for the model, and extracts 
+    the raw float prediction.
+
+    Edge Case Handling:
+    1. Checks for missing or None model arguments.
+    2. Clips predictions strictly to [0.0, 1.0] to prevent downstream out-of-bounds errors.
+    3. Handles potential NaN or Infinity outputs from the model gracefully, 
+       defaulting to 0.0 if the model produces an invalid prediction.
+
+    Parameters
+    ----------
+    model : Any
+        The trained ML model (LightGBM, GBR, or RandomForest). Must implement `.predict()`.
+    mv : MatchVector
+        The Pydantic model representing the derived features between the student and job.
+
     Returns
     -------
-    score : float in [0, 1]
-    feature_row : dict of features used
+    score : float
+        The bounded predicted match score in the range [0.0, 1.0].
+    feature_row : dict
+        The flat feature dictionary used during prediction, returned for explainability.
     """
+    if model is None:
+        logger.error("Scoring failed: Model object is None.")
+        raise ValueError("Cannot score pair: The provided model is uninitialized or None.")
+
     try:
         feature_row = match_vector_to_feature_row(mv)
-        # Pass as DataFrame so feature names match training
+        
+        # Pass as DataFrame so feature names match the training phase
         X = pd.DataFrame([feature_row], columns=FEATURE_COLS)
+        
+        # Raw inference
         raw_score = float(model.predict(X)[0])
-        score = float(np.clip(raw_score, 0.0, 1.0))
+        
+        # Edge case: Model outputs NaN or Infinity
+        if np.isnan(raw_score) or np.isinf(raw_score):
+            logger.warning(f"Model output invalid score ({raw_score}) for pair ({mv.student_id}, {mv.job_id}). Defaulting to 0.0.")
+            score = 0.0
+        else:
+            # Bound the score strictly between 0 and 1
+            score = float(np.clip(raw_score, 0.0, 1.0))
+            
         return score, feature_row
+        
     except Exception as e:
         logger.error(f"Scoring failed for pair ({mv.student_id}, {mv.job_id}): {e}", exc_info=True)
         raise
@@ -295,12 +330,41 @@ def rank_jobs_for_student(
     top_k: int = None,
 ) -> StudentRankingResponse:
     """
-    Rank all jobs for a given student.
+    Rank all provided jobs for a given student.
+
+    This function iterates over the job pool, computes the match vector for each,
+    infers the match score, and generates an explainability payload.
+
+    Edge Case Handling:
+    1. If the jobs list is empty, returns an empty ranking response immediately without error.
+    2. If a single job fails (e.g. data corruption), it is skipped and logged, 
+       allowing the rest of the batch to succeed (fault tolerance).
+
+    Parameters
+    ----------
+    model : Any
+        The loaded ranker model.
+    student : StudentFeatures
+        The target student profile.
+    jobs : List[JobFeatures]
+        The pool of jobs to rank.
+    top_k : int, optional
+        If provided, limits the returned list to the top `top_k` results.
 
     Returns
     -------
-    StudentRankingResponse with ranked_jobs sorted descending by score.
+    StudentRankingResponse
+        A Pydantic object containing the ranked and sorted jobs.
     """
+    if not jobs:
+        logger.warning(f"Empty job list provided for student {student.student_id}. Returning empty response.")
+        return StudentRankingResponse(
+            student_id=student.student_id,
+            ranked_jobs=[],
+            total_evaluated=0,
+            timestamp=datetime.datetime.utcnow().isoformat() + "Z",
+        )
+
     try:
         ranked = []
         for job in jobs:
@@ -342,10 +406,38 @@ def rank_candidates_for_job(
     """
     Rank all students (candidates) for a given job.
 
+    Iterates over the candidate pool, scores each one, and generates an 
+    explainability payload.
+
+    Edge Case Handling:
+    1. If the candidate list is empty, returns an empty ranking response immediately.
+    2. Fault isolation: A failure in scoring one candidate does not halt the entire process.
+
+    Parameters
+    ----------
+    model : Any
+        The loaded ranker model.
+    job : JobFeatures
+        The target job profile.
+    students : List[StudentFeatures]
+        The pool of candidates to rank.
+    top_k : int, optional
+        If provided, truncates the final sorted list to `top_k` candidates.
+
     Returns
     -------
-    JobRankingResponse with ranked_candidates sorted descending by score.
+    JobRankingResponse
+        A Pydantic object containing the ranked candidates sorted by score.
     """
+    if not students:
+        logger.warning(f"Empty student list provided for job {job.job_id}. Returning empty response.")
+        return JobRankingResponse(
+            job_id=job.job_id,
+            ranked_candidates=[],
+            total_evaluated=0,
+            timestamp=datetime.datetime.utcnow().isoformat() + "Z",
+        )
+
     try:
         ranked = []
         for student in students:

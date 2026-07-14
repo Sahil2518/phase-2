@@ -141,6 +141,46 @@ class JobRankingResponse(BaseModel):
     timestamp: str
 
 
+# ---------------------------------------------------------------------------
+# Task 05 — API Integration Schemas
+# ---------------------------------------------------------------------------
+
+class RankCandidatesRequest(BaseModel):
+    """
+    Request payload to rank a list of candidates against a specific job.
+    Includes explicit error handling constraints to prevent empty lists.
+    """
+    job: JobFeatures = Field(..., description="The target job posting to match against.")
+    candidates: List[StudentFeatures] = Field(
+        ..., 
+        min_length=1, 
+        description="A non-empty list of candidates to rank. Edge case: Empty lists are rejected by Pydantic."
+    )
+    top_k: Optional[int] = Field(
+        default=None, 
+        ge=1, 
+        description="Optional limit on the number of results to return."
+    )
+
+
+class RankJobsRequest(BaseModel):
+    """
+    Request payload to rank a list of jobs for a specific student.
+    Includes explicit error handling constraints to prevent empty lists.
+    """
+    student: StudentFeatures = Field(..., description="The target student profile to match against.")
+    jobs: List[JobFeatures] = Field(
+        ..., 
+        min_length=1, 
+        description="A non-empty list of jobs to rank. Edge case: Empty lists are rejected by Pydantic."
+    )
+    top_k: Optional[int] = Field(
+        default=None, 
+        ge=1, 
+        description="Optional limit on the number of results to return."
+    )
+
+
 if __name__ == "__main__":
     import json
     # Simple validation test
