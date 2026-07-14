@@ -1,0 +1,9 @@
+{
+  "model": "LightGBM",
+  "n_train": 480,
+  "n_val": 120,
+  "rmse": 0.018644,
+  "r2": 0.987753,
+  "spearman_rho": 0.994859,
+  "spearman_pval": 0.0
+}

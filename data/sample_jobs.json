@@ -1,0 +1,378 @@
+[
+  {
+    "job_id": "REAL-JOB-1001",
+    "required_skills": [
+      "Go"
+    ],
+    "preferred_skills": [
+      "Rust"
+    ],
+    "min_experience": 2.0,
+    "max_experience": 5.0,
+    "min_education": 2,
+    "salary_min": 68000,
+    "salary_max": 88000,
+    "job_location": "San Francisco",
+    "work_model": "Hybrid",
+    "min_coding_score": 0.75,
+    "min_communication_score": 0.72
+  },
+  {
+    "job_id": "REAL-JOB-1002",
+    "required_skills": [
+      "Go"
+    ],
+    "preferred_skills": [
+      "Spring Boot",
+      "CSS"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 3,
+    "salary_min": 85000,
+    "salary_max": 126000,
+    "job_location": "San Francisco",
+    "work_model": "Hybrid",
+    "min_coding_score": 0.88,
+    "min_communication_score": 0.8
+  },
+  {
+    "job_id": "REAL-JOB-1003",
+    "required_skills": [
+      "Go"
+    ],
+    "preferred_skills": [
+      "Swift"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 2,
+    "salary_min": 99000,
+    "salary_max": 134000,
+    "job_location": "San Francisco",
+    "work_model": "Hybrid",
+    "min_coding_score": 0.68,
+    "min_communication_score": 0.64
+  },
+  {
+    "job_id": "REAL-JOB-1004",
+    "required_skills": [
+      "Java",
+      "JavaScript"
+    ],
+    "preferred_skills": [
+      "Go",
+      "HTML",
+      "CSS"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 1,
+    "salary_min": 96000,
+    "salary_max": 125000,
+    "job_location": "Remote",
+    "work_model": "On-site",
+    "min_coding_score": 0.65,
+    "min_communication_score": 0.73
+  },
+  {
+    "job_id": "REAL-JOB-1005",
+    "required_skills": [
+      "Java",
+      "JavaScript",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "Go",
+      "PHP",
+      "HTML",
+      "CSS"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 3,
+    "salary_min": 86000,
+    "salary_max": 107000,
+    "job_location": "Berlin",
+    "work_model": "Remote",
+    "min_coding_score": 0.78,
+    "min_communication_score": 0.65
+  },
+  {
+    "job_id": "REAL-JOB-1006",
+    "required_skills": [
+      "TensorFlow"
+    ],
+    "preferred_skills": [
+      "Kotlin",
+      "GraphQL"
+    ],
+    "min_experience": 1.0,
+    "max_experience": 4.0,
+    "min_education": 2,
+    "salary_min": 70000,
+    "salary_max": 97000,
+    "job_location": "New York",
+    "work_model": "Hybrid",
+    "min_coding_score": 0.79,
+    "min_communication_score": 0.76
+  },
+  {
+    "job_id": "REAL-JOB-1007",
+    "required_skills": [
+      "Kotlin"
+    ],
+    "preferred_skills": [
+      "Python",
+      "PHP"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 2,
+    "salary_min": 89000,
+    "salary_max": 115000,
+    "job_location": "Berlin",
+    "work_model": "On-site",
+    "min_coding_score": 0.65,
+    "min_communication_score": 0.69
+  },
+  {
+    "job_id": "REAL-JOB-1008",
+    "required_skills": [
+      "Go"
+    ],
+    "preferred_skills": [
+      "HTML",
+      "CSS"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 2,
+    "salary_min": 63000,
+    "salary_max": 92000,
+    "job_location": "New York",
+    "work_model": "Remote",
+    "min_coding_score": 0.82,
+    "min_communication_score": 0.64
+  },
+  {
+    "job_id": "REAL-JOB-1009",
+    "required_skills": [
+      "Go"
+    ],
+    "preferred_skills": [],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 2,
+    "salary_min": 101000,
+    "salary_max": 133000,
+    "job_location": "New York",
+    "work_model": "Remote",
+    "min_coding_score": 0.86,
+    "min_communication_score": 0.56
+  },
+  {
+    "job_id": "REAL-JOB-1010",
+    "required_skills": [
+      "Java",
+      "JavaScript",
+      "AWS"
+    ],
+    "preferred_skills": [
+      "Go",
+      "HTML",
+      "CSS"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 2,
+    "salary_min": 90000,
+    "salary_max": 111000,
+    "job_location": "London",
+    "work_model": "Remote",
+    "min_coding_score": 0.76,
+    "min_communication_score": 0.66
+  },
+  {
+    "job_id": "REAL-JOB-1011",
+    "required_skills": [
+      "Java",
+      "JavaScript",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "Go",
+      "PHP",
+      "HTML",
+      "CSS"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 1,
+    "salary_min": 83000,
+    "salary_max": 124000,
+    "job_location": "Seattle",
+    "work_model": "Remote",
+    "min_coding_score": 0.86,
+    "min_communication_score": 0.79
+  },
+  {
+    "job_id": "REAL-JOB-1012",
+    "required_skills": [
+      "SQL",
+      "Go"
+    ],
+    "preferred_skills": [
+      "PHP",
+      "CSS"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 2,
+    "salary_min": 104000,
+    "salary_max": 138000,
+    "job_location": "Seattle",
+    "work_model": "On-site",
+    "min_coding_score": 0.8,
+    "min_communication_score": 0.52
+  },
+  {
+    "job_id": "REAL-JOB-1013",
+    "required_skills": [
+      "AWS"
+    ],
+    "preferred_skills": [],
+    "min_experience": 5.0,
+    "max_experience": 8.0,
+    "min_education": 3,
+    "salary_min": 73000,
+    "salary_max": 103000,
+    "job_location": "Berlin",
+    "work_model": "Hybrid",
+    "min_coding_score": 0.82,
+    "min_communication_score": 0.72
+  },
+  {
+    "job_id": "REAL-JOB-1014",
+    "required_skills": [
+      "Java",
+      "SQL",
+      "Go"
+    ],
+    "preferred_skills": [
+      "PHP",
+      "HTML",
+      "CSS"
+    ],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 2,
+    "salary_min": 94000,
+    "salary_max": 135000,
+    "job_location": "Seattle",
+    "work_model": "Hybrid",
+    "min_coding_score": 0.89,
+    "min_communication_score": 0.63
+  },
+  {
+    "job_id": "REAL-JOB-1015",
+    "required_skills": [
+      "Go"
+    ],
+    "preferred_skills": [],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 3,
+    "salary_min": 87000,
+    "salary_max": 133000,
+    "job_location": "London",
+    "work_model": "Hybrid",
+    "min_coding_score": 0.73,
+    "min_communication_score": 0.56
+  },
+  {
+    "job_id": "REAL-JOB-1016",
+    "required_skills": [
+      "HTML"
+    ],
+    "preferred_skills": [
+      "CSS"
+    ],
+    "min_experience": 5.0,
+    "max_experience": 8.0,
+    "min_education": 2,
+    "salary_min": 83000,
+    "salary_max": 132000,
+    "job_location": "Berlin",
+    "work_model": "Remote",
+    "min_coding_score": 0.85,
+    "min_communication_score": 0.6
+  },
+  {
+    "job_id": "REAL-JOB-1017",
+    "required_skills": [
+      "Go"
+    ],
+    "preferred_skills": [],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 2,
+    "salary_min": 110000,
+    "salary_max": 132000,
+    "job_location": "Remote",
+    "work_model": "Hybrid",
+    "min_coding_score": 0.68,
+    "min_communication_score": 0.77
+  },
+  {
+    "job_id": "REAL-JOB-1018",
+    "required_skills": [
+      "Go"
+    ],
+    "preferred_skills": [],
+    "min_experience": 0.0,
+    "max_experience": 3.0,
+    "min_education": 1,
+    "salary_min": 96000,
+    "salary_max": 142000,
+    "job_location": "New York",
+    "work_model": "Remote",
+    "min_coding_score": 0.69,
+    "min_communication_score": 0.7
+  },
+  {
+    "job_id": "REAL-JOB-1019",
+    "required_skills": [
+      "Go"
+    ],
+    "preferred_skills": [],
+    "min_experience": 3.0,
+    "max_experience": 6.0,
+    "min_education": 3,
+    "salary_min": 85000,
+    "salary_max": 110000,
+    "job_location": "Remote",
+    "work_model": "On-site",
+    "min_coding_score": 0.73,
+    "min_communication_score": 0.66
+  },
+  {
+    "job_id": "REAL-JOB-1020",
+    "required_skills": [
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "TensorFlow",
+      "Go"
+    ],
+    "min_experience": 5.0,
+    "max_experience": 8.0,
+    "min_education": 3,
+    "salary_min": 82000,
+    "salary_max": 114000,
+    "job_location": "Austin",
+    "work_model": "Hybrid",
+    "min_coding_score": 0.86,
+    "min_communication_score": 0.55
+  }
+]

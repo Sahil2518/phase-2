@@ -1,0 +1,687 @@
+{
+  "generated_at": "2026-07-13T13:52:15.417483Z",
+  "model_artifact": "models\\ranker_v1_20260713.pkl",
+  "metrics": {
+    "model": "LightGBM",
+    "n_train": 480,
+    "n_val": 120,
+    "rmse": 0.018644,
+    "r2": 0.987753,
+    "spearman_rho": 0.994859,
+    "spearman_pval": 0.0
+  },
+  "student_rankings": [
+    {
+      "student_id": "STU-001",
+      "ranked_jobs": [
+        {
+          "id": "JOB-101",
+          "score": 0.8643,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-104",
+          "score": 0.6076,
+          "explanation": [
+            "\u274c Weak skill match (33%)",
+            "\u274c Experience below requirement",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-105",
+          "score": 0.5983,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "JOB-103",
+          "score": 0.5853,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-102",
+          "score": 0.3407,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.356879Z"
+    },
+    {
+      "student_id": "STU-002",
+      "ranked_jobs": [
+        {
+          "id": "JOB-102",
+          "score": 0.8698,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-101",
+          "score": 0.663,
+          "explanation": [
+            "\u274c Weak skill match (33%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u274c Communication score below threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "JOB-104",
+          "score": 0.6438,
+          "explanation": [
+            "\u274c Weak skill match (33%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-105",
+          "score": 0.5356,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "JOB-103",
+          "score": 0.5175,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u274c Communication score below threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.362012Z"
+    },
+    {
+      "student_id": "STU-003",
+      "ranked_jobs": [
+        {
+          "id": "JOB-103",
+          "score": 0.8389,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u26a0\ufe0f  Experience near the minimum threshold",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-105",
+          "score": 0.457,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "JOB-101",
+          "score": 0.3547,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u2705 Education requirement satisfied",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "JOB-104",
+          "score": 0.3334,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u2705 Education requirement satisfied",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-102",
+          "score": 0.249,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.369084Z"
+    },
+    {
+      "student_id": "STU-004",
+      "ranked_jobs": [
+        {
+          "id": "JOB-104",
+          "score": 0.8698,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-101",
+          "score": 0.6804,
+          "explanation": [
+            "\u274c Weak skill match (33%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "JOB-102",
+          "score": 0.5708,
+          "explanation": [
+            "\u26a0\ufe0f  Partial skill match (50%)",
+            "\u26a0\ufe0f  Experience near the minimum threshold",
+            "\u274c Education requirement not met",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "JOB-103",
+          "score": 0.542,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-105",
+          "score": 0.5324,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.373643Z"
+    },
+    {
+      "student_id": "STU-005",
+      "ranked_jobs": [
+        {
+          "id": "JOB-105",
+          "score": 0.79,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range",
+            "\u274c Education requirement not met",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "JOB-103",
+          "score": 0.4614,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u274c Communication score below threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-101",
+          "score": 0.2391,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u274c Coding score below threshold",
+            "\u274c Communication score below threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "JOB-104",
+          "score": 0.2391,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u274c Coding score below threshold",
+            "\u274c Communication score below threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "JOB-102",
+          "score": 0.2365,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u274c Coding score below threshold",
+            "\u274c Communication score below threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.379219Z"
+    }
+  ],
+  "job_rankings": [
+    {
+      "job_id": "JOB-101",
+      "ranked_candidates": [
+        {
+          "id": "STU-001",
+          "score": 0.8643,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-004",
+          "score": 0.6804,
+          "explanation": [
+            "\u274c Weak skill match (33%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-002",
+          "score": 0.663,
+          "explanation": [
+            "\u274c Weak skill match (33%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u274c Communication score below threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-003",
+          "score": 0.3547,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u2705 Education requirement satisfied",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-005",
+          "score": 0.2391,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u274c Coding score below threshold",
+            "\u274c Communication score below threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.387408Z"
+    },
+    {
+      "job_id": "JOB-102",
+      "ranked_candidates": [
+        {
+          "id": "STU-002",
+          "score": 0.8698,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-004",
+          "score": 0.5708,
+          "explanation": [
+            "\u26a0\ufe0f  Partial skill match (50%)",
+            "\u26a0\ufe0f  Experience near the minimum threshold",
+            "\u274c Education requirement not met",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-001",
+          "score": 0.3407,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-003",
+          "score": 0.249,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-005",
+          "score": 0.2365,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u274c Coding score below threshold",
+            "\u274c Communication score below threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.394023Z"
+    },
+    {
+      "job_id": "JOB-103",
+      "ranked_candidates": [
+        {
+          "id": "STU-003",
+          "score": 0.8389,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u26a0\ufe0f  Experience near the minimum threshold",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-001",
+          "score": 0.5853,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-004",
+          "score": 0.542,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-002",
+          "score": 0.5175,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u274c Communication score below threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-005",
+          "score": 0.4614,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u274c Communication score below threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.401268Z"
+    },
+    {
+      "job_id": "JOB-104",
+      "ranked_candidates": [
+        {
+          "id": "STU-004",
+          "score": 0.8698,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-002",
+          "score": 0.6438,
+          "explanation": [
+            "\u274c Weak skill match (33%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-001",
+          "score": 0.6076,
+          "explanation": [
+            "\u274c Weak skill match (33%)",
+            "\u274c Experience below requirement",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-003",
+          "score": 0.3334,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u2705 Education requirement satisfied",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        },
+        {
+          "id": "STU-005",
+          "score": 0.2391,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u274c Experience below requirement",
+            "\u274c Education requirement not met",
+            "\u274c Coding score below threshold",
+            "\u274c Communication score below threshold",
+            "\u2705 Location / work model compatible"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.409861Z"
+    },
+    {
+      "job_id": "JOB-105",
+      "ranked_candidates": [
+        {
+          "id": "STU-005",
+          "score": 0.79,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range",
+            "\u274c Education requirement not met",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-001",
+          "score": 0.5983,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-002",
+          "score": 0.5356,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-004",
+          "score": 0.5324,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u2705 Coding score above threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        },
+        {
+          "id": "STU-003",
+          "score": 0.457,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u2705 Experience well within range",
+            "\u2705 Education requirement satisfied",
+            "\u274c Coding score below threshold",
+            "\u2705 Communication score above threshold",
+            "\u26a0\ufe0f  Location mismatch"
+          ]
+        }
+      ],
+      "total_evaluated": 5,
+      "timestamp": "2026-07-13T13:52:15.417483Z"
+    }
+  ]
+}

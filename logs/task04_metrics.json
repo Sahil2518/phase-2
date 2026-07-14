@@ -1,0 +1,14 @@
+{
+  "task": "Task 04",
+  "generated_at": "2026-07-14T14:28:43.298623Z",
+  "total_matches_evaluated": 800,
+  "shortlisted_count": 24,
+  "shortlist_rate": 0.03,
+  "average_match_score": 0.5085,
+  "average_factors_met": 2.3,
+  "confidence_distribution": {
+    "high": 356,
+    "medium": 298,
+    "low": 146
+  }
+}

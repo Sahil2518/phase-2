@@ -1,0 +1,416 @@
+[
+  {
+    "student_id": "REAL-CAND-1001",
+    "skills_hard": [
+      "Java",
+      "Spring Boot",
+      "NoSQL",
+      "Go",
+      "SQL"
+    ],
+    "skills_soft": [
+      "Agile",
+      "Time Management"
+    ],
+    "years_experience": 4.1,
+    "education_level": 2,
+    "expected_salary": 127189,
+    "preferred_location": "Austin",
+    "remote_preference": "On-site",
+    "coding_score": 0.8,
+    "communication_score": 0.67
+  },
+  {
+    "student_id": "REAL-CAND-1002",
+    "skills_hard": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "skills_soft": [
+      "Analytical",
+      "Problem Solving"
+    ],
+    "years_experience": 0.2,
+    "education_level": 3,
+    "expected_salary": 88955,
+    "preferred_location": "San Francisco",
+    "remote_preference": "Remote",
+    "coding_score": 0.72,
+    "communication_score": 0.86
+  },
+  {
+    "student_id": "REAL-CAND-1003",
+    "skills_hard": [
+      "JavaScript",
+      "Python"
+    ],
+    "skills_soft": [
+      "Analytical",
+      "Problem Solving"
+    ],
+    "years_experience": 1.3,
+    "education_level": 2,
+    "expected_salary": 74885,
+    "preferred_location": "Berlin",
+    "remote_preference": "Remote",
+    "coding_score": 0.65,
+    "communication_score": 0.76
+  },
+  {
+    "student_id": "REAL-CAND-1004",
+    "skills_hard": [
+      "Java",
+      "JavaScript",
+      "Python",
+      "CSS"
+    ],
+    "skills_soft": [
+      "Analytical",
+      "Agile"
+    ],
+    "years_experience": 1.0,
+    "education_level": 3,
+    "expected_salary": 70055,
+    "preferred_location": "Berlin",
+    "remote_preference": "Remote",
+    "coding_score": 0.69,
+    "communication_score": 0.63
+  },
+  {
+    "student_id": "REAL-CAND-1005",
+    "skills_hard": [
+      "CSS",
+      "Python",
+      "JavaScript"
+    ],
+    "skills_soft": [
+      "Time Management",
+      "Analytical"
+    ],
+    "years_experience": 0.1,
+    "education_level": 3,
+    "expected_salary": 74520,
+    "preferred_location": "Austin",
+    "remote_preference": "On-site",
+    "coding_score": 0.6,
+    "communication_score": 0.8
+  },
+  {
+    "student_id": "REAL-CAND-1006",
+    "skills_hard": [
+      "GCP",
+      "Go",
+      "Python",
+      "Docker",
+      "AWS",
+      "Linux"
+    ],
+    "skills_soft": [
+      "Creativity",
+      "Time Management"
+    ],
+    "years_experience": 6.4,
+    "education_level": 3,
+    "expected_salary": 140248,
+    "preferred_location": "San Francisco",
+    "remote_preference": "Remote",
+    "coding_score": 0.75,
+    "communication_score": 0.68
+  },
+  {
+    "student_id": "REAL-CAND-1007",
+    "skills_hard": [
+      "Docker",
+      "Linux",
+      "AWS",
+      "Go"
+    ],
+    "skills_soft": [
+      "Analytical",
+      "Leadership"
+    ],
+    "years_experience": 6.8,
+    "education_level": 3,
+    "expected_salary": 177257,
+    "preferred_location": "Seattle",
+    "remote_preference": "Hybrid",
+    "coding_score": 0.7,
+    "communication_score": 0.81
+  },
+  {
+    "student_id": "REAL-CAND-1008",
+    "skills_hard": [
+      "GCP",
+      "Python",
+      "Kubernetes",
+      "Docker",
+      "AWS"
+    ],
+    "skills_soft": [
+      "Teamwork",
+      "Problem Solving"
+    ],
+    "years_experience": 5.5,
+    "education_level": 3,
+    "expected_salary": 135272,
+    "preferred_location": "Berlin",
+    "remote_preference": "Remote",
+    "coding_score": 0.84,
+    "communication_score": 0.74
+  },
+  {
+    "student_id": "REAL-CAND-1009",
+    "skills_hard": [
+      "JavaScript",
+      "Python",
+      "Java"
+    ],
+    "skills_soft": [
+      "Leadership",
+      "Time Management"
+    ],
+    "years_experience": 0.3,
+    "education_level": 2,
+    "expected_salary": 81621,
+    "preferred_location": "New York",
+    "remote_preference": "Hybrid",
+    "coding_score": 0.8,
+    "communication_score": 0.64
+  },
+  {
+    "student_id": "REAL-CAND-1010",
+    "skills_hard": [
+      "CSS",
+      "Python",
+      "JavaScript"
+    ],
+    "skills_soft": [
+      "Time Management",
+      "Analytical"
+    ],
+    "years_experience": 0.9,
+    "education_level": 2,
+    "expected_salary": 86938,
+    "preferred_location": "Berlin",
+    "remote_preference": "On-site",
+    "coding_score": 0.69,
+    "communication_score": 0.86
+  },
+  {
+    "student_id": "REAL-CAND-1011",
+    "skills_hard": [
+      "Node.js",
+      "CSS",
+      "MongoDB",
+      "JavaScript",
+      "React",
+      "AWS"
+    ],
+    "skills_soft": [
+      "Teamwork",
+      "Communication"
+    ],
+    "years_experience": 5.8,
+    "education_level": 1,
+    "expected_salary": 156512,
+    "preferred_location": "San Francisco",
+    "remote_preference": "Remote",
+    "coding_score": 0.73,
+    "communication_score": 0.6
+  },
+  {
+    "student_id": "REAL-CAND-1012",
+    "skills_hard": [
+      "AWS",
+      "Linux",
+      "Kubernetes",
+      "GCP",
+      "Docker",
+      "Python"
+    ],
+    "skills_soft": [
+      "Creativity",
+      "Leadership"
+    ],
+    "years_experience": 6.4,
+    "education_level": 2,
+    "expected_salary": 132100,
+    "preferred_location": "Austin",
+    "remote_preference": "On-site",
+    "coding_score": 0.83,
+    "communication_score": 0.68
+  },
+  {
+    "student_id": "REAL-CAND-1013",
+    "skills_hard": [
+      "SQL",
+      "Python",
+      "Pandas",
+      "Data Science",
+      "Machine Learning",
+      "AWS"
+    ],
+    "skills_soft": [
+      "Time Management",
+      "Creativity"
+    ],
+    "years_experience": 7.2,
+    "education_level": 4,
+    "expected_salary": 185555,
+    "preferred_location": "New York",
+    "remote_preference": "On-site",
+    "coding_score": 0.97,
+    "communication_score": 0.78
+  },
+  {
+    "student_id": "REAL-CAND-1014",
+    "skills_hard": [
+      "Docker",
+      "GCP",
+      "Go",
+      "AWS",
+      "Kubernetes"
+    ],
+    "skills_soft": [
+      "Time Management",
+      "Analytical"
+    ],
+    "years_experience": 7.0,
+    "education_level": 2,
+    "expected_salary": 124122,
+    "preferred_location": "New York",
+    "remote_preference": "On-site",
+    "coding_score": 0.72,
+    "communication_score": 0.88
+  },
+  {
+    "student_id": "REAL-CAND-1015",
+    "skills_hard": [
+      "HTML",
+      "Python",
+      "CSS",
+      "JavaScript"
+    ],
+    "skills_soft": [
+      "Analytical",
+      "Communication"
+    ],
+    "years_experience": 1.2,
+    "education_level": 3,
+    "expected_salary": 83522,
+    "preferred_location": "Seattle",
+    "remote_preference": "On-site",
+    "coding_score": 0.64,
+    "communication_score": 0.64
+  },
+  {
+    "student_id": "REAL-CAND-1016",
+    "skills_hard": [
+      "Kubernetes",
+      "Python",
+      "Go",
+      "Docker",
+      "Linux",
+      "AWS"
+    ],
+    "skills_soft": [
+      "Time Management",
+      "Leadership"
+    ],
+    "years_experience": 6.7,
+    "education_level": 3,
+    "expected_salary": 123906,
+    "preferred_location": "Austin",
+    "remote_preference": "Hybrid",
+    "coding_score": 0.74,
+    "communication_score": 0.71
+  },
+  {
+    "student_id": "REAL-CAND-1017",
+    "skills_hard": [
+      "TensorFlow",
+      "Data Science",
+      "AWS",
+      "SQL",
+      "Pandas",
+      "Python",
+      "Machine Learning"
+    ],
+    "skills_soft": [
+      "Teamwork",
+      "Leadership"
+    ],
+    "years_experience": 7.4,
+    "education_level": 3,
+    "expected_salary": 157955,
+    "preferred_location": "Chicago",
+    "remote_preference": "On-site",
+    "coding_score": 0.95,
+    "communication_score": 0.7
+  },
+  {
+    "student_id": "REAL-CAND-1018",
+    "skills_hard": [
+      "JavaScript",
+      "Node.js",
+      "MongoDB",
+      "React",
+      "CSS"
+    ],
+    "skills_soft": [
+      "Analytical",
+      "Teamwork"
+    ],
+    "years_experience": 2.2,
+    "education_level": 2,
+    "expected_salary": 159379,
+    "preferred_location": "Seattle",
+    "remote_preference": "Remote",
+    "coding_score": 0.75,
+    "communication_score": 0.63
+  },
+  {
+    "student_id": "REAL-CAND-1019",
+    "skills_hard": [
+      "CSS",
+      "AWS",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "MongoDB"
+    ],
+    "skills_soft": [
+      "Leadership",
+      "Communication"
+    ],
+    "years_experience": 4.0,
+    "education_level": 1,
+    "expected_salary": 130543,
+    "preferred_location": "Remote",
+    "remote_preference": "Hybrid",
+    "coding_score": 0.78,
+    "communication_score": 0.61
+  },
+  {
+    "student_id": "REAL-CAND-1020",
+    "skills_hard": [
+      "Java",
+      "Spring Boot",
+      "Python",
+      "NoSQL",
+      "SQL"
+    ],
+    "skills_soft": [
+      "Analytical",
+      "Time Management"
+    ],
+    "years_experience": 3.2,
+    "education_level": 2,
+    "expected_salary": 136385,
+    "preferred_location": "Chicago",
+    "remote_preference": "On-site",
+    "coding_score": 0.79,
+    "communication_score": 0.67
+  }
+]
