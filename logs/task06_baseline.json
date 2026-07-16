@@ -1,0 +1,102 @@
+{
+  "task": "Task 06 — Match-Quality Baseline",
+  "baseline_version": "v1.0",
+  "recorded_at": "2026-07-16T00:37:00.427126Z",
+  "corpus": {
+    "n_pairs": 1000,
+    "random_seed": 42,
+    "features": [
+      "skill_overlap_ratio",
+      "norm_experience_gap",
+      "capped_salary_ratio",
+      "education_met",
+      "coding_threshold_met",
+      "communication_threshold_met",
+      "location_match"
+    ]
+  },
+  "model": {
+    "artifact": "models\\ranker_v1_20260713.pkl",
+    "sha256": "1efb100c60bb06e9fe10285d1e3ee82f335b46b045bed9f2435504e644a038ff"
+  },
+  "regression_metrics": {
+    "rmse": 0.017135,
+    "mae": 0.012438,
+    "r2": 0.987701,
+    "spearman_rho": 0.995025,
+    "spearman_pval": 0.0
+  },
+  "ranking_metrics": {
+    "ndcg_at_5": 0.996158,
+    "ndcg_at_10": 0.99425,
+    "mrr": 1.0,
+    "precision_at_5": 1.0,
+    "precision_at_10": 1.0
+  },
+  "score_distribution": {
+    "mean": 0.597456,
+    "std": 0.148746,
+    "min": 0.205363,
+    "max": 0.932694,
+    "p25": 0.48846,
+    "p50": 0.60093,
+    "p75": 0.709849,
+    "p90": 0.795252,
+    "skewness": -0.101526,
+    "kurtosis": -0.577447
+  },
+  "shortlist_stats": {
+    "shortlist_threshold": 0.65,
+    "shortlisted_count": 375,
+    "shortlist_rate": 0.375,
+    "confidence_distribution": {
+      "high": 270,
+      "medium": 634,
+      "low": 96
+    }
+  },
+  "feature_importance": [
+    {
+      "rank": 1,
+      "feature": "skill_overlap_ratio",
+      "label": "Skill Match",
+      "importance": 0.33349
+    },
+    {
+      "rank": 2,
+      "feature": "norm_experience_gap",
+      "label": "Experience Fit",
+      "importance": 0.214504
+    },
+    {
+      "rank": 3,
+      "feature": "capped_salary_ratio",
+      "label": "Salary Alignment",
+      "importance": 0.150434
+    },
+    {
+      "rank": 4,
+      "feature": "education_met",
+      "label": "Education Req.",
+      "importance": 0.091997
+    },
+    {
+      "rank": 5,
+      "feature": "communication_threshold_met",
+      "label": "Communication Prof.",
+      "importance": 0.080263
+    },
+    {
+      "rank": 6,
+      "feature": "coding_threshold_met",
+      "label": "Coding Prof.",
+      "importance": 0.071579
+    },
+    {
+      "rank": 7,
+      "feature": "location_match",
+      "label": "Location Compat.",
+      "importance": 0.057733
+    }
+  ]
+}
