@@ -223,6 +223,23 @@ def _evaluate_shortlist(
 
 
 # ---------------------------------------------------------------------------
+# Spend-Quality Guardrail
+# ---------------------------------------------------------------------------
+def _evaluate_spend_guardrail(score: float, confidence: str) -> Tuple[bool, str]:
+    """
+    Determine if a match score is low enough to trigger the spend-quality guardrail.
+    This prevents users from wasting paid applications on roles they are highly unlikely to secure.
+    """
+    try:
+        # We flag anything that is Weak (score < 0.45) or has Low confidence
+        if score < 0.45 or confidence == "low":
+            return True, "Low-fit Warning: Your match profile for this role is weak. We do not recommend spending a paid application here."
+        return False, None
+    except Exception as e:
+        logger.error(f"Spend guardrail evaluation failed: {e}", exc_info=True)
+        return False, None
+
+# ---------------------------------------------------------------------------
 # Natural-language summary builder
 # ---------------------------------------------------------------------------
 def _build_summary(
@@ -309,7 +326,12 @@ def build_explanation_payload(
             score, feature_row, factors_met, factors_total
         )
 
-        # 5. NL summary
+        # 5. Spend-Quality Guardrail
+        low_fit_warning, spend_warning_message = _evaluate_spend_guardrail(
+            score, confidence
+        )
+
+        # 6. NL summary
         summary = _build_summary(score, contributions, confidence, shortlist)
 
         return ExplanationPayload(
@@ -324,6 +346,8 @@ def build_explanation_payload(
             match_score=round(score, 4),
             factors_met=factors_met,
             factors_total=factors_total,
+            low_fit_warning=low_fit_warning,
+            spend_warning_message=spend_warning_message,
         )
 
     except Exception as e:

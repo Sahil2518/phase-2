@@ -84,7 +84,8 @@ class ExplanationPayload(BaseModel):
     match_score: float = Field(..., ge=0.0, le=1.0)
     factors_met: int = Field(..., ge=0, description="Number of threshold factors met")
     factors_total: int = Field(..., ge=0, description="Total threshold factors evaluated")
-
+    low_fit_warning: bool = Field(default=False, description="Spend-quality guardrail flag indicating a low-fit match")
+    spend_warning_message: Optional[str] = Field(default=None, description="Warning message if low_fit_warning is True")
 
 class MatchScoreResponse(BaseModel):
     student_id: str
