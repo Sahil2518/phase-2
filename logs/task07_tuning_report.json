@@ -1,0 +1,74 @@
+{
+  "task": "Task 07 — Matching Tune Delta",
+  "recorded_at": "2026-07-17T12:31:56.482388Z",
+  "models": {
+    "v1": "models\\ranker_v1_20260713.pkl",
+    "v2": "models\\ranker_v2_20260717.pkl"
+  },
+  "metrics_delta": {
+    "ndcg_at_5": {
+      "v1": 0.996158,
+      "v2": 0.99945,
+      "diff": 0.003292
+    },
+    "mrr": {
+      "v1": 1.0,
+      "v2": 1.0,
+      "diff": 0.0
+    },
+    "rmse": {
+      "v1": 0.017135,
+      "v2": 0.015769,
+      "diff": -0.001366
+    },
+    "shortlist_rate": {
+      "v1": 0.375,
+      "v2": 0.43,
+      "diff": 0.055
+    }
+  },
+  "feature_importance_v2": [
+    {
+      "rank": 1,
+      "feature": "skill_overlap_ratio",
+      "label": "Skill Match",
+      "importance": 0.285541
+    },
+    {
+      "rank": 2,
+      "feature": "norm_experience_gap",
+      "label": "Experience Fit",
+      "importance": 0.208737
+    },
+    {
+      "rank": 3,
+      "feature": "capped_salary_ratio",
+      "label": "Salary Alignment",
+      "importance": 0.175836
+    },
+    {
+      "rank": 4,
+      "feature": "education_met",
+      "label": "Education Req.",
+      "importance": 0.114987
+    },
+    {
+      "rank": 5,
+      "feature": "coding_threshold_met",
+      "label": "Coding Prof.",
+      "importance": 0.107614
+    },
+    {
+      "rank": 6,
+      "feature": "communication_threshold_met",
+      "label": "Communication Prof.",
+      "importance": 0.066131
+    },
+    {
+      "rank": 7,
+      "feature": "location_match",
+      "label": "Location Compat.",
+      "importance": 0.041153
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "version": "v2",
+  "date": "20260717",
+  "features": [
+    "skill_overlap_ratio",
+    "norm_experience_gap",
+    "capped_salary_ratio",
+    "education_met",
+    "coding_threshold_met",
+    "communication_threshold_met",
+    "location_match"
+  ],
+  "metrics": {
+    "rmse": 0.015769247240247756,
+    "r2": 0.99009789239821,
+    "ndcg_at_5": 0.9994502610931482,
+    "mrr": 1.0,
+    "shortlist_rate": 0.43
+  },
+  "sha256": "d71829d010363f60fe6c5bfbb104b013cabaaa82f5e5026c9cc0b3a3b6b0bb25",
+  "artifact": "models\\ranker_v2_20260717.pkl"
+}

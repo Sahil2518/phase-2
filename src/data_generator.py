@@ -53,11 +53,27 @@ WEIGHTS = {
 }
 WEIGHT_SUM = sum(WEIGHTS.values())  # 1.02
 
+# Task 7: Conversion-optimised weights
+CONVERSION_WEIGHTS = {
+    "skill_overlap_ratio":          0.45,   # Increased: Top conversion blocker
+    "norm_experience_gap":          0.20,   # Unchanged
+    "capped_salary_ratio":          0.20,   # Increased: Students pay for salary-aligned roles
+    "education_met":                0.07,   # Decreased: Less binary blocking
+    "coding_threshold_met":         0.05,   # Decreased: Many paid apps bypass this
+    "communication_threshold_met":  0.02,   # Decreased: Minor signal
+    "location_match":               0.01,   # Decreased: Remote-work era reduces weight
+}
+CONVERSION_WEIGHT_SUM = sum(CONVERSION_WEIGHTS.values())
 
 def _reference_label(row: pd.Series) -> float:
     """Compute a ground-truth relevance score from feature values."""
     score = sum(WEIGHTS[col] * row[col] for col in FEATURE_COLS)
     return float(np.clip(score / WEIGHT_SUM, 0.0, 1.0))
+
+def _conversion_label(row: pd.Series) -> float:
+    """Compute a conversion-optimised ground-truth score from feature values."""
+    score = sum(CONVERSION_WEIGHTS[col] * row[col] for col in FEATURE_COLS)
+    return float(np.clip(score / CONVERSION_WEIGHT_SUM, 0.0, 1.0))
 
 
 def generate_synthetic_data(
@@ -126,6 +142,46 @@ def generate_synthetic_data(
 
     except Exception as e:
         logger.error(f"Synthetic data generation failed: {e}", exc_info=True)
+        raise
+
+def generate_conversion_data(
+    n_samples: int = 1200,
+    random_state: int = 42,
+) -> pd.DataFrame:
+    """
+    Generate synthetic data specifically labelled for conversion optimisation.
+    This calls generate_synthetic_data() but replaces the 'label' column
+    using _conversion_label().
+    
+    Parameters
+    ----------
+    n_samples : int
+        Number of synthetic records to create.
+    random_state : int
+        NumPy random seed for reproducibility.
+
+    Returns
+    -------
+    pd.DataFrame with conversion-optimised labels.
+    """
+    try:
+        logger.info("Generating conversion-optimised dataset...")
+        df = generate_synthetic_data(n_samples=n_samples, random_state=random_state)
+        df["label"] = df.apply(_conversion_label, axis=1)
+        
+        assert len(df) == n_samples, "Row count mismatch."
+        assert df["label"].between(0.0, 1.0).all(), "Conversion label out of [0,1] range."
+        
+        logger.info(
+            f"Conversion labels applied. "
+            f"Stats — mean: {df['label'].mean():.4f}, "
+            f"std: {df['label'].std():.4f}, "
+            f"min: {df['label'].min():.4f}, "
+            f"max: {df['label'].max():.4f}"
+        )
+        return df
+    except Exception as e:
+        logger.error(f"Conversion data generation failed: {e}", exc_info=True)
         raise
 
 
