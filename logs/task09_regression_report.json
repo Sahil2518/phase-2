@@ -1,0 +1,25 @@
+{
+  "task": "Task 09 — Relevance Regression Check",
+  "recorded_at": "2026-07-19T09:09:28.415228Z",
+  "models": {
+    "v1": "models\\ranker_v1_20260713.pkl",
+    "v2": "models\\ranker_v2_20260717.pkl"
+  },
+  "evaluation_corpus": {
+    "n_samples": 1000,
+    "seed": 42,
+    "label_type": "reference_label"
+  },
+  "metrics_delta": {
+    "ndcg_at_5": {
+      "v1_baseline": 0.996158,
+      "v2_tuned": 0.998529,
+      "diff": 0.002371
+    },
+    "mrr": {
+      "v1_baseline": 1.0,
+      "v2_tuned": 1.0,
+      "diff": 0.0
+    }
+  }
+}
