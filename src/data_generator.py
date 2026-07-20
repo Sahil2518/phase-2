@@ -220,3 +220,55 @@ def match_vector_to_feature_row(mv) -> dict:
 if __name__ == "__main__":
     df = generate_synthetic_data()
     print(df.describe())
+
+# ---------------------------------------------------------------------------
+# Task 11 — Proctoring Data Generator
+# ---------------------------------------------------------------------------
+def generate_proctoring_data(
+    n_samples: int = 1500,
+    random_state: int = 42,
+) -> pd.DataFrame:
+    """
+    Generate synthetic proctoring events with a 'fraud' label.
+    Simulates signals like face_match_confidence, background_noise, and tab_switches.
+    """
+    try:
+        rng = np.random.default_rng(random_state)
+        logger.info(f"Generating {n_samples} synthetic proctoring records...")
+
+        # Most candidates are innocent (~85%), some commit fraud (~15%)
+        labels = rng.binomial(1, 0.15, n_samples)
+        
+        # Innocent distributions
+        # High face match, low noise, few tab switches, low keystroke variance
+        face_match_innocent = rng.normal(0.95, 0.05, n_samples)
+        noise_innocent = rng.exponential(0.1, n_samples)
+        tabs_innocent = rng.poisson(1, n_samples)
+        keystroke_innocent = rng.normal(0.2, 0.1, n_samples)
+        
+        # Fraud distributions
+        # Lower/erratic face match, higher noise, many tab switches, erratic keystrokes
+        face_match_fraud = rng.normal(0.60, 0.2, n_samples)
+        noise_fraud = rng.exponential(0.4, n_samples)
+        tabs_fraud = rng.poisson(8, n_samples)
+        keystroke_fraud = rng.normal(0.7, 0.2, n_samples)
+        
+        face_match = np.where(labels == 1, face_match_fraud, face_match_innocent)
+        noise = np.where(labels == 1, noise_fraud, noise_innocent)
+        tabs = np.where(labels == 1, tabs_fraud, tabs_innocent)
+        keystroke = np.where(labels == 1, keystroke_fraud, keystroke_innocent)
+
+        df = pd.DataFrame({
+            "face_match_confidence": np.clip(face_match, 0.0, 1.0),
+            "background_noise_level": np.clip(noise, 0.0, 1.0),
+            "tab_switch_count": np.clip(tabs, 0, 50).astype(int),
+            "keystroke_variance": np.clip(keystroke, 0.0, 1.0),
+            "label": labels
+        })
+        
+        logger.info(f"Proctoring data generated. Fraud rate: {df['label'].mean():.2%}")
+        return df
+
+    except Exception as e:
+        logger.error(f"Proctoring data generation failed: {e}", exc_info=True)
+        raise
