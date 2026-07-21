@@ -1,0 +1,159 @@
+{
+  "task": "Task 12 \u2014 Resume/JD Parsing v0",
+  "timestamp": "2026-07-21T18:39:42.863806",
+  "parsed_resumes": [
+    {
+      "student_id": "STU-001",
+      "skills_hard": [
+        "python",
+        "sql",
+        "pandas",
+        "numpy",
+        "scikit-learn",
+        "tensorflow",
+        "pytorch",
+        "aws",
+        "docker",
+        "git"
+      ],
+      "skills_soft": [
+        "communication",
+        "problem solving",
+        "collaboration"
+      ],
+      "years_experience": 4.0,
+      "education_level": 3,
+      "expected_salary": 0.0,
+      "preferred_location": "",
+      "remote_preference": "On-site",
+      "coding_score": 0.0,
+      "communication_score": 0.0
+    },
+    {
+      "student_id": "STU-002",
+      "skills_hard": [
+        "javascript",
+        "typescript",
+        "react",
+        "node.js",
+        "mongodb",
+        "docker",
+        "git",
+        "rest api"
+      ],
+      "skills_soft": [
+        "teamwork",
+        "time management",
+        "attention to detail"
+      ],
+      "years_experience": 2.0,
+      "education_level": 2,
+      "expected_salary": 0.0,
+      "preferred_location": "",
+      "remote_preference": "On-site",
+      "coding_score": 0.0,
+      "communication_score": 0.0
+    },
+    {
+      "student_id": "STU-003",
+      "skills_hard": [
+        "java",
+        "kotlin",
+        "android",
+        "jetpack compose",
+        "git",
+        "rest api"
+      ],
+      "skills_soft": [
+        "adaptability",
+        "creativity",
+        "presentation"
+      ],
+      "years_experience": 3.0,
+      "education_level": 2,
+      "expected_salary": 0.0,
+      "preferred_location": "",
+      "remote_preference": "On-site",
+      "coding_score": 0.0,
+      "communication_score": 0.0
+    }
+  ],
+  "parsed_job_descriptions": [
+    {
+      "job_id": "JOB-001",
+      "required_skills": [
+        "python",
+        "sql",
+        "tensorflow",
+        "pytorch",
+        "spark",
+        "aws",
+        "docker",
+        "kubernetes",
+        "git",
+        "graphql"
+      ],
+      "preferred_skills": [],
+      "min_experience": 5.0,
+      "max_experience": null,
+      "min_education": 3,
+      "salary_min": 120000.0,
+      "salary_max": 160000.0,
+      "job_location": "",
+      "work_model": "Hybrid",
+      "min_coding_score": 0.0,
+      "min_communication_score": 0.0
+    },
+    {
+      "job_id": "JOB-002",
+      "required_skills": [
+        "javascript",
+        "typescript",
+        "react",
+        "node.js",
+        "mongodb",
+        "aws",
+        "docker",
+        "git",
+        "rest api"
+      ],
+      "preferred_skills": [],
+      "min_experience": 2.0,
+      "max_experience": null,
+      "min_education": 2,
+      "salary_min": 80000.0,
+      "salary_max": 110000.0,
+      "job_location": "",
+      "work_model": "Remote",
+      "min_coding_score": 0.0,
+      "min_communication_score": 0.0
+    },
+    {
+      "job_id": "JOB-003",
+      "required_skills": [
+        "java",
+        "kotlin",
+        "android",
+        "jetpack compose",
+        "git",
+        "ci/cd",
+        "rest api"
+      ],
+      "preferred_skills": [],
+      "min_experience": 3.0,
+      "max_experience": null,
+      "min_education": 2,
+      "salary_min": 90000.0,
+      "salary_max": 120000.0,
+      "job_location": "",
+      "work_model": "On-site",
+      "min_coding_score": 0.0,
+      "min_communication_score": 0.0
+    }
+  ],
+  "summary": {
+    "resumes_parsed": 3,
+    "jds_parsed": 3,
+    "total_parsed": 6
+  }
+}
