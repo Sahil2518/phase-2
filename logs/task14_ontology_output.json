@@ -1,0 +1,885 @@
+{
+  "task": "Task 14 \u2014 Parsing into Ontology",
+  "timestamp": "2026-07-23T21:05:19.462739",
+  "enriched_resumes": [
+    {
+      "student_id": "STU-001",
+      "raw_skills": [
+        "python",
+        "sql",
+        "pandas",
+        "numpy",
+        "scikit-learn",
+        "tensorflow",
+        "pytorch",
+        "aws",
+        "docker",
+        "git",
+        "communication",
+        "problem solving",
+        "collaboration"
+      ],
+      "ontology_records": [
+        {
+          "raw": "python",
+          "canonical": "python",
+          "domain": "programming_languages",
+          "cluster": "general_purpose",
+          "in_ontology": true
+        },
+        {
+          "raw": "sql",
+          "canonical": "sql",
+          "domain": "databases",
+          "cluster": "relational",
+          "in_ontology": true
+        },
+        {
+          "raw": "pandas",
+          "canonical": "pandas",
+          "domain": "data_and_ml",
+          "cluster": "data_processing",
+          "in_ontology": true
+        },
+        {
+          "raw": "numpy",
+          "canonical": "numpy",
+          "domain": "data_and_ml",
+          "cluster": "data_processing",
+          "in_ontology": true
+        },
+        {
+          "raw": "scikit-learn",
+          "canonical": "scikit-learn",
+          "domain": "data_and_ml",
+          "cluster": "machine_learning",
+          "in_ontology": true
+        },
+        {
+          "raw": "tensorflow",
+          "canonical": "tensorflow",
+          "domain": "data_and_ml",
+          "cluster": "deep_learning_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "pytorch",
+          "canonical": "pytorch",
+          "domain": "data_and_ml",
+          "cluster": "deep_learning_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "aws",
+          "canonical": "aws",
+          "domain": "cloud_and_devops",
+          "cluster": "cloud_platforms",
+          "in_ontology": true
+        },
+        {
+          "raw": "docker",
+          "canonical": "docker",
+          "domain": "cloud_and_devops",
+          "cluster": "containers_and_orchestration",
+          "in_ontology": true
+        },
+        {
+          "raw": "git",
+          "canonical": "git",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        },
+        {
+          "raw": "communication",
+          "canonical": "communication",
+          "domain": "soft_skills",
+          "cluster": "interpersonal",
+          "in_ontology": true
+        },
+        {
+          "raw": "problem solving",
+          "canonical": "problem solving",
+          "domain": "soft_skills",
+          "cluster": "cognitive",
+          "in_ontology": true
+        },
+        {
+          "raw": "collaboration",
+          "canonical": "collaboration",
+          "domain": "soft_skills",
+          "cluster": "interpersonal",
+          "in_ontology": true
+        }
+      ],
+      "summary": {
+        "source_id": "STU-001",
+        "total_skills": 13,
+        "mapped_count": 13,
+        "unmapped_count": 0,
+        "coverage_pct": 100.0,
+        "domain_distribution": {
+          "programming_languages": 1,
+          "databases": 1,
+          "data_and_ml": 5,
+          "cloud_and_devops": 3,
+          "soft_skills": 3
+        },
+        "cluster_breakdown": {
+          "programming_languages": {
+            "general_purpose": 1
+          },
+          "databases": {
+            "relational": 1
+          },
+          "data_and_ml": {
+            "data_processing": 2,
+            "machine_learning": 1,
+            "deep_learning_frameworks": 2
+          },
+          "cloud_and_devops": {
+            "cloud_platforms": 1,
+            "containers_and_orchestration": 1,
+            "ci_cd_and_vcs": 1
+          },
+          "soft_skills": {
+            "interpersonal": 2,
+            "cognitive": 1
+          }
+        },
+        "unmapped_skills": []
+      }
+    },
+    {
+      "student_id": "STU-002",
+      "raw_skills": [
+        "javascript",
+        "typescript",
+        "react",
+        "node.js",
+        "mongodb",
+        "docker",
+        "git",
+        "rest api",
+        "teamwork",
+        "time management",
+        "attention to detail"
+      ],
+      "ontology_records": [
+        {
+          "raw": "javascript",
+          "canonical": "javascript",
+          "domain": "programming_languages",
+          "cluster": "scripting",
+          "in_ontology": true
+        },
+        {
+          "raw": "typescript",
+          "canonical": "typescript",
+          "domain": "programming_languages",
+          "cluster": "scripting",
+          "in_ontology": true
+        },
+        {
+          "raw": "react",
+          "canonical": "react",
+          "domain": "web_development",
+          "cluster": "frontend_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "node.js",
+          "canonical": "node.js",
+          "domain": "web_development",
+          "cluster": "backend_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "mongodb",
+          "canonical": "mongodb",
+          "domain": "databases",
+          "cluster": "nosql",
+          "in_ontology": true
+        },
+        {
+          "raw": "docker",
+          "canonical": "docker",
+          "domain": "cloud_and_devops",
+          "cluster": "containers_and_orchestration",
+          "in_ontology": true
+        },
+        {
+          "raw": "git",
+          "canonical": "git",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        },
+        {
+          "raw": "rest api",
+          "canonical": "rest api",
+          "domain": "web_development",
+          "cluster": "api_patterns",
+          "in_ontology": true
+        },
+        {
+          "raw": "teamwork",
+          "canonical": "teamwork",
+          "domain": "soft_skills",
+          "cluster": "interpersonal",
+          "in_ontology": true
+        },
+        {
+          "raw": "time management",
+          "canonical": "time management",
+          "domain": "soft_skills",
+          "cluster": "self_management",
+          "in_ontology": true
+        },
+        {
+          "raw": "attention to detail",
+          "canonical": "attention to detail",
+          "domain": "soft_skills",
+          "cluster": "cognitive",
+          "in_ontology": true
+        }
+      ],
+      "summary": {
+        "source_id": "STU-002",
+        "total_skills": 11,
+        "mapped_count": 11,
+        "unmapped_count": 0,
+        "coverage_pct": 100.0,
+        "domain_distribution": {
+          "programming_languages": 2,
+          "web_development": 3,
+          "databases": 1,
+          "cloud_and_devops": 2,
+          "soft_skills": 3
+        },
+        "cluster_breakdown": {
+          "programming_languages": {
+            "scripting": 2
+          },
+          "web_development": {
+            "frontend_frameworks": 1,
+            "backend_frameworks": 1,
+            "api_patterns": 1
+          },
+          "databases": {
+            "nosql": 1
+          },
+          "cloud_and_devops": {
+            "containers_and_orchestration": 1,
+            "ci_cd_and_vcs": 1
+          },
+          "soft_skills": {
+            "interpersonal": 1,
+            "self_management": 1,
+            "cognitive": 1
+          }
+        },
+        "unmapped_skills": []
+      }
+    },
+    {
+      "student_id": "STU-003",
+      "raw_skills": [
+        "java",
+        "kotlin",
+        "android",
+        "jetpack compose",
+        "git",
+        "rest api",
+        "adaptability",
+        "creativity",
+        "presentation"
+      ],
+      "ontology_records": [
+        {
+          "raw": "java",
+          "canonical": "java",
+          "domain": "programming_languages",
+          "cluster": "general_purpose",
+          "in_ontology": true
+        },
+        {
+          "raw": "kotlin",
+          "canonical": "kotlin",
+          "domain": "programming_languages",
+          "cluster": "mobile",
+          "in_ontology": true
+        },
+        {
+          "raw": "android",
+          "canonical": "android",
+          "domain": "web_development",
+          "cluster": "mobile_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "jetpack compose",
+          "canonical": "jetpack compose",
+          "domain": "web_development",
+          "cluster": "mobile_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "git",
+          "canonical": "git",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        },
+        {
+          "raw": "rest api",
+          "canonical": "rest api",
+          "domain": "web_development",
+          "cluster": "api_patterns",
+          "in_ontology": true
+        },
+        {
+          "raw": "adaptability",
+          "canonical": "adaptability",
+          "domain": "soft_skills",
+          "cluster": "self_management",
+          "in_ontology": true
+        },
+        {
+          "raw": "creativity",
+          "canonical": "creativity",
+          "domain": "soft_skills",
+          "cluster": "cognitive",
+          "in_ontology": true
+        },
+        {
+          "raw": "presentation",
+          "canonical": "presentation",
+          "domain": "soft_skills",
+          "cluster": "self_management",
+          "in_ontology": true
+        }
+      ],
+      "summary": {
+        "source_id": "STU-003",
+        "total_skills": 9,
+        "mapped_count": 9,
+        "unmapped_count": 0,
+        "coverage_pct": 100.0,
+        "domain_distribution": {
+          "programming_languages": 2,
+          "web_development": 3,
+          "cloud_and_devops": 1,
+          "soft_skills": 3
+        },
+        "cluster_breakdown": {
+          "programming_languages": {
+            "general_purpose": 1,
+            "mobile": 1
+          },
+          "web_development": {
+            "mobile_frameworks": 2,
+            "api_patterns": 1
+          },
+          "cloud_and_devops": {
+            "ci_cd_and_vcs": 1
+          },
+          "soft_skills": {
+            "self_management": 2,
+            "cognitive": 1
+          }
+        },
+        "unmapped_skills": []
+      }
+    },
+    {
+      "student_id": "STU-004",
+      "raw_skills": [
+        "python",
+        "aws",
+        "azure",
+        "docker",
+        "kubernetes",
+        "terraform",
+        "git",
+        "ci/cd",
+        "jenkins",
+        "linux",
+        "bash",
+        "communication",
+        "leadership",
+        "problem solving"
+      ],
+      "ontology_records": [
+        {
+          "raw": "python",
+          "canonical": "python",
+          "domain": "programming_languages",
+          "cluster": "general_purpose",
+          "in_ontology": true
+        },
+        {
+          "raw": "aws",
+          "canonical": "aws",
+          "domain": "cloud_and_devops",
+          "cluster": "cloud_platforms",
+          "in_ontology": true
+        },
+        {
+          "raw": "azure",
+          "canonical": "azure",
+          "domain": "cloud_and_devops",
+          "cluster": "cloud_platforms",
+          "in_ontology": true
+        },
+        {
+          "raw": "docker",
+          "canonical": "docker",
+          "domain": "cloud_and_devops",
+          "cluster": "containers_and_orchestration",
+          "in_ontology": true
+        },
+        {
+          "raw": "kubernetes",
+          "canonical": "kubernetes",
+          "domain": "cloud_and_devops",
+          "cluster": "containers_and_orchestration",
+          "in_ontology": true
+        },
+        {
+          "raw": "terraform",
+          "canonical": "terraform",
+          "domain": "cloud_and_devops",
+          "cluster": "infrastructure_as_code",
+          "in_ontology": true
+        },
+        {
+          "raw": "git",
+          "canonical": "git",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        },
+        {
+          "raw": "ci/cd",
+          "canonical": "ci/cd",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        },
+        {
+          "raw": "jenkins",
+          "canonical": "jenkins",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        },
+        {
+          "raw": "linux",
+          "canonical": "linux",
+          "domain": "operating_systems",
+          "cluster": "unix_like",
+          "in_ontology": true
+        },
+        {
+          "raw": "bash",
+          "canonical": "bash",
+          "domain": "programming_languages",
+          "cluster": "scripting",
+          "in_ontology": true
+        },
+        {
+          "raw": "communication",
+          "canonical": "communication",
+          "domain": "soft_skills",
+          "cluster": "interpersonal",
+          "in_ontology": true
+        },
+        {
+          "raw": "leadership",
+          "canonical": "leadership",
+          "domain": "soft_skills",
+          "cluster": "interpersonal",
+          "in_ontology": true
+        },
+        {
+          "raw": "problem solving",
+          "canonical": "problem solving",
+          "domain": "soft_skills",
+          "cluster": "cognitive",
+          "in_ontology": true
+        }
+      ],
+      "summary": {
+        "source_id": "STU-004",
+        "total_skills": 14,
+        "mapped_count": 14,
+        "unmapped_count": 0,
+        "coverage_pct": 100.0,
+        "domain_distribution": {
+          "programming_languages": 2,
+          "cloud_and_devops": 8,
+          "operating_systems": 1,
+          "soft_skills": 3
+        },
+        "cluster_breakdown": {
+          "programming_languages": {
+            "general_purpose": 1,
+            "scripting": 1
+          },
+          "cloud_and_devops": {
+            "cloud_platforms": 2,
+            "containers_and_orchestration": 2,
+            "infrastructure_as_code": 1,
+            "ci_cd_and_vcs": 3
+          },
+          "operating_systems": {
+            "unix_like": 1
+          },
+          "soft_skills": {
+            "interpersonal": 2,
+            "cognitive": 1
+          }
+        },
+        "unmapped_skills": []
+      }
+    }
+  ],
+  "enriched_jds": [
+    {
+      "job_id": "JOB-001",
+      "raw_skills": [
+        "python",
+        "sql",
+        "tensorflow",
+        "pytorch",
+        "spark",
+        "aws",
+        "docker",
+        "kubernetes",
+        "git",
+        "graphql"
+      ],
+      "ontology_records": [
+        {
+          "raw": "python",
+          "canonical": "python",
+          "domain": "programming_languages",
+          "cluster": "general_purpose",
+          "in_ontology": true
+        },
+        {
+          "raw": "sql",
+          "canonical": "sql",
+          "domain": "databases",
+          "cluster": "relational",
+          "in_ontology": true
+        },
+        {
+          "raw": "tensorflow",
+          "canonical": "tensorflow",
+          "domain": "data_and_ml",
+          "cluster": "deep_learning_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "pytorch",
+          "canonical": "pytorch",
+          "domain": "data_and_ml",
+          "cluster": "deep_learning_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "spark",
+          "canonical": "spark",
+          "domain": "data_and_ml",
+          "cluster": "data_processing",
+          "in_ontology": true
+        },
+        {
+          "raw": "aws",
+          "canonical": "aws",
+          "domain": "cloud_and_devops",
+          "cluster": "cloud_platforms",
+          "in_ontology": true
+        },
+        {
+          "raw": "docker",
+          "canonical": "docker",
+          "domain": "cloud_and_devops",
+          "cluster": "containers_and_orchestration",
+          "in_ontology": true
+        },
+        {
+          "raw": "kubernetes",
+          "canonical": "kubernetes",
+          "domain": "cloud_and_devops",
+          "cluster": "containers_and_orchestration",
+          "in_ontology": true
+        },
+        {
+          "raw": "git",
+          "canonical": "git",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        },
+        {
+          "raw": "graphql",
+          "canonical": "graphql",
+          "domain": "web_development",
+          "cluster": "api_patterns",
+          "in_ontology": true
+        }
+      ],
+      "summary": {
+        "source_id": "JOB-001",
+        "total_skills": 10,
+        "mapped_count": 10,
+        "unmapped_count": 0,
+        "coverage_pct": 100.0,
+        "domain_distribution": {
+          "programming_languages": 1,
+          "databases": 1,
+          "data_and_ml": 3,
+          "cloud_and_devops": 4,
+          "web_development": 1
+        },
+        "cluster_breakdown": {
+          "programming_languages": {
+            "general_purpose": 1
+          },
+          "databases": {
+            "relational": 1
+          },
+          "data_and_ml": {
+            "deep_learning_frameworks": 2,
+            "data_processing": 1
+          },
+          "cloud_and_devops": {
+            "cloud_platforms": 1,
+            "containers_and_orchestration": 2,
+            "ci_cd_and_vcs": 1
+          },
+          "web_development": {
+            "api_patterns": 1
+          }
+        },
+        "unmapped_skills": []
+      }
+    },
+    {
+      "job_id": "JOB-002",
+      "raw_skills": [
+        "javascript",
+        "typescript",
+        "react",
+        "node.js",
+        "mongodb",
+        "aws",
+        "docker",
+        "git",
+        "rest api"
+      ],
+      "ontology_records": [
+        {
+          "raw": "javascript",
+          "canonical": "javascript",
+          "domain": "programming_languages",
+          "cluster": "scripting",
+          "in_ontology": true
+        },
+        {
+          "raw": "typescript",
+          "canonical": "typescript",
+          "domain": "programming_languages",
+          "cluster": "scripting",
+          "in_ontology": true
+        },
+        {
+          "raw": "react",
+          "canonical": "react",
+          "domain": "web_development",
+          "cluster": "frontend_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "node.js",
+          "canonical": "node.js",
+          "domain": "web_development",
+          "cluster": "backend_frameworks",
+          "in_ontology": true
+        },
+        {
+          "raw": "mongodb",
+          "canonical": "mongodb",
+          "domain": "databases",
+          "cluster": "nosql",
+          "in_ontology": true
+        },
+        {
+          "raw": "aws",
+          "canonical": "aws",
+          "domain": "cloud_and_devops",
+          "cluster": "cloud_platforms",
+          "in_ontology": true
+        },
+        {
+          "raw": "docker",
+          "canonical": "docker",
+          "domain": "cloud_and_devops",
+          "cluster": "containers_and_orchestration",
+          "in_ontology": true
+        },
+        {
+          "raw": "git",
+          "canonical": "git",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        },
+        {
+          "raw": "rest api",
+          "canonical": "rest api",
+          "domain": "web_development",
+          "cluster": "api_patterns",
+          "in_ontology": true
+        }
+      ],
+      "summary": {
+        "source_id": "JOB-002",
+        "total_skills": 9,
+        "mapped_count": 9,
+        "unmapped_count": 0,
+        "coverage_pct": 100.0,
+        "domain_distribution": {
+          "programming_languages": 2,
+          "web_development": 3,
+          "databases": 1,
+          "cloud_and_devops": 3
+        },
+        "cluster_breakdown": {
+          "programming_languages": {
+            "scripting": 2
+          },
+          "web_development": {
+            "frontend_frameworks": 1,
+            "backend_frameworks": 1,
+            "api_patterns": 1
+          },
+          "databases": {
+            "nosql": 1
+          },
+          "cloud_and_devops": {
+            "cloud_platforms": 1,
+            "containers_and_orchestration": 1,
+            "ci_cd_and_vcs": 1
+          }
+        },
+        "unmapped_skills": []
+      }
+    },
+    {
+      "job_id": "JOB-003",
+      "raw_skills": [
+        "python",
+        "aws",
+        "gcp",
+        "azure",
+        "docker",
+        "kubernetes",
+        "terraform",
+        "git",
+        "jenkins"
+      ],
+      "ontology_records": [
+        {
+          "raw": "python",
+          "canonical": "python",
+          "domain": "programming_languages",
+          "cluster": "general_purpose",
+          "in_ontology": true
+        },
+        {
+          "raw": "aws",
+          "canonical": "aws",
+          "domain": "cloud_and_devops",
+          "cluster": "cloud_platforms",
+          "in_ontology": true
+        },
+        {
+          "raw": "gcp",
+          "canonical": "gcp",
+          "domain": "cloud_and_devops",
+          "cluster": "cloud_platforms",
+          "in_ontology": true
+        },
+        {
+          "raw": "azure",
+          "canonical": "azure",
+          "domain": "cloud_and_devops",
+          "cluster": "cloud_platforms",
+          "in_ontology": true
+        },
+        {
+          "raw": "docker",
+          "canonical": "docker",
+          "domain": "cloud_and_devops",
+          "cluster": "containers_and_orchestration",
+          "in_ontology": true
+        },
+        {
+          "raw": "kubernetes",
+          "canonical": "kubernetes",
+          "domain": "cloud_and_devops",
+          "cluster": "containers_and_orchestration",
+          "in_ontology": true
+        },
+        {
+          "raw": "terraform",
+          "canonical": "terraform",
+          "domain": "cloud_and_devops",
+          "cluster": "infrastructure_as_code",
+          "in_ontology": true
+        },
+        {
+          "raw": "git",
+          "canonical": "git",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        },
+        {
+          "raw": "jenkins",
+          "canonical": "jenkins",
+          "domain": "cloud_and_devops",
+          "cluster": "ci_cd_and_vcs",
+          "in_ontology": true
+        }
+      ],
+      "summary": {
+        "source_id": "JOB-003",
+        "total_skills": 9,
+        "mapped_count": 9,
+        "unmapped_count": 0,
+        "coverage_pct": 100.0,
+        "domain_distribution": {
+          "programming_languages": 1,
+          "cloud_and_devops": 8
+        },
+        "cluster_breakdown": {
+          "programming_languages": {
+            "general_purpose": 1
+          },
+          "cloud_and_devops": {
+            "cloud_platforms": 3,
+            "containers_and_orchestration": 2,
+            "infrastructure_as_code": 1,
+            "ci_cd_and_vcs": 2
+          }
+        },
+        "unmapped_skills": []
+      }
+    }
+  ]
+}

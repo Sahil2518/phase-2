@@ -1,0 +1,61 @@
+{
+  "task": "Task 14 \u2014 Parsing into Ontology",
+  "timestamp": "2026-07-23T21:05:19.471293",
+  "validation": {
+    "min_coverage_threshold": 80.0,
+    "num_entities_checked": 7,
+    "avg_coverage_pct": 100.0,
+    "all_entities_passed": true,
+    "per_entity": [
+      {
+        "id": "STU-001",
+        "coverage_pct": 100.0,
+        "mapped": 13,
+        "total": 13,
+        "passed": true
+      },
+      {
+        "id": "STU-002",
+        "coverage_pct": 100.0,
+        "mapped": 11,
+        "total": 11,
+        "passed": true
+      },
+      {
+        "id": "STU-003",
+        "coverage_pct": 100.0,
+        "mapped": 9,
+        "total": 9,
+        "passed": true
+      },
+      {
+        "id": "STU-004",
+        "coverage_pct": 100.0,
+        "mapped": 14,
+        "total": 14,
+        "passed": true
+      },
+      {
+        "id": "JOB-001",
+        "coverage_pct": 100.0,
+        "mapped": 10,
+        "total": 10,
+        "passed": true
+      },
+      {
+        "id": "JOB-002",
+        "coverage_pct": 100.0,
+        "mapped": 9,
+        "total": 9,
+        "passed": true
+      },
+      {
+        "id": "JOB-003",
+        "coverage_pct": 100.0,
+        "mapped": 9,
+        "total": 9,
+        "passed": true
+      }
+    ]
+  }
+}
