@@ -1,0 +1,28 @@
+{
+  "task": "Task 13 \u2014 Proctoring FP Reduction (Ship)",
+  "timestamp": "2026-07-23T20:56:39.935689",
+  "n_features": 7,
+  "model_type": "LightGBM + LR Soft-Voting Ensemble",
+  "threshold": 0.1,
+  "roc_auc": 1.0,
+  "avg_precision_score": 1.0,
+  "precision": 1.0,
+  "recall_tpr": 1.0,
+  "false_positive_rate": 0.0,
+  "true_positives": 47,
+  "false_positives": 0,
+  "true_negatives": 253,
+  "false_negatives": 0,
+  "fpr_target_met": true,
+  "baseline_comparison": {
+    "task11_fpr": 0.0474,
+    "task13_fpr": 0.0,
+    "fpr_delta": 0.0474,
+    "task11_precision": 0.7955,
+    "task13_precision": 1.0,
+    "baseline_fp_scaled": 12,
+    "task13_fp": 0,
+    "fp_reduction_percent": 100.0,
+    "fp_reduced": true
+  }
+}
