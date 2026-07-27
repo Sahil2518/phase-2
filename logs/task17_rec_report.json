@@ -1,0 +1,307 @@
+{
+  "task": "Task 17 - Rec v1 Live",
+  "timestamp": "2026-07-27T11:48:22.246104",
+  "college_cohort_size": 6,
+  "jobs_evaluated": 5,
+  "cohort_recommendations": [
+    {
+      "student_id": "STU-T17-001",
+      "top_jobs": [
+        {
+          "job_id": "JOB-T17-001",
+          "score": 0.8904,
+          "rank": 1,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-003",
+          "score": 0.682,
+          "rank": 2,
+          "explanation": [
+            "\u26a0\ufe0f  Partial skill match (60%)",
+            "\u274c Experience below requirement"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-005",
+          "score": 0.5844,
+          "rank": 3,
+          "explanation": [
+            "\u274c Weak skill match (20%)",
+            "\u2705 Experience well within range"
+          ]
+        }
+      ],
+      "avg_match_score": 0.7189,
+      "best_job_id": "JOB-T17-001",
+      "placement_ready": true
+    },
+    {
+      "student_id": "STU-T17-002",
+      "top_jobs": [
+        {
+          "job_id": "JOB-T17-002",
+          "score": 0.8904,
+          "rank": 1,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-004",
+          "score": 0.5844,
+          "rank": 2,
+          "explanation": [
+            "\u274c Weak skill match (20%)",
+            "\u2705 Experience well within range"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-005",
+          "score": 0.5144,
+          "rank": 3,
+          "explanation": [
+            "\u274c Weak skill match (20%)",
+            "\u26a0\ufe0f  Experience near the minimum threshold"
+          ]
+        }
+      ],
+      "avg_match_score": 0.6631,
+      "best_job_id": "JOB-T17-002",
+      "placement_ready": true
+    },
+    {
+      "student_id": "STU-T17-003",
+      "top_jobs": [
+        {
+          "job_id": "JOB-T17-003",
+          "score": 0.8904,
+          "rank": 1,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-001",
+          "score": 0.6284,
+          "rank": 2,
+          "explanation": [
+            "\u26a0\ufe0f  Partial skill match (40%)",
+            "\u2705 Experience well within range"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-005",
+          "score": 0.6239,
+          "rank": 3,
+          "explanation": [
+            "\u274c Weak skill match (20%)",
+            "\u2705 Experience well within range"
+          ]
+        }
+      ],
+      "avg_match_score": 0.7142,
+      "best_job_id": "JOB-T17-003",
+      "placement_ready": true
+    },
+    {
+      "student_id": "STU-T17-004",
+      "top_jobs": [
+        {
+          "job_id": "JOB-T17-004",
+          "score": 0.7957,
+          "rank": 1,
+          "explanation": [
+            "\u2705 Strong skill match (80%)",
+            "\u2705 Experience well within range"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-005",
+          "score": 0.4832,
+          "rank": 2,
+          "explanation": [
+            "\u274c Weak skill match (20%)",
+            "\u274c Experience below requirement"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-002",
+          "score": 0.4642,
+          "rank": 3,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u26a0\ufe0f  Experience near the minimum threshold"
+          ]
+        }
+      ],
+      "avg_match_score": 0.581,
+      "best_job_id": "JOB-T17-004",
+      "placement_ready": true
+    },
+    {
+      "student_id": "STU-T17-005",
+      "top_jobs": [
+        {
+          "job_id": "JOB-T17-005",
+          "score": 0.8904,
+          "rank": 1,
+          "explanation": [
+            "\u2705 Strong skill match (100%)",
+            "\u2705 Experience well within range"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-004",
+          "score": 0.6869,
+          "rank": 2,
+          "explanation": [
+            "\u26a0\ufe0f  Partial skill match (40%)",
+            "\u2705 Experience well within range"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-002",
+          "score": 0.5912,
+          "rank": 3,
+          "explanation": [
+            "\u274c Weak skill match (20%)",
+            "\u2705 Experience well within range"
+          ]
+        }
+      ],
+      "avg_match_score": 0.7228,
+      "best_job_id": "JOB-T17-005",
+      "placement_ready": true
+    },
+    {
+      "student_id": "STU-T17-006",
+      "top_jobs": [
+        {
+          "job_id": "JOB-T17-001",
+          "score": 0.6677,
+          "rank": 1,
+          "explanation": [
+            "\u2705 Strong skill match (80%)",
+            "\u274c Experience below requirement"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-003",
+          "score": 0.4922,
+          "rank": 2,
+          "explanation": [
+            "\u26a0\ufe0f  Partial skill match (40%)",
+            "\u274c Experience below requirement"
+          ]
+        },
+        {
+          "job_id": "JOB-T17-004",
+          "score": 0.4595,
+          "rank": 3,
+          "explanation": [
+            "\u274c Weak skill match (0%)",
+            "\u26a0\ufe0f  Experience near the minimum threshold"
+          ]
+        }
+      ],
+      "avg_match_score": 0.5398,
+      "best_job_id": "JOB-T17-001",
+      "placement_ready": true
+    }
+  ],
+  "job_shortlists": [
+    {
+      "job_id": "JOB-T17-001",
+      "top_candidates": [
+        {
+          "student_id": "STU-T17-001",
+          "score": 0.8904,
+          "rank": 1
+        },
+        {
+          "student_id": "STU-T17-006",
+          "score": 0.6677,
+          "rank": 2
+        }
+      ],
+      "avg_candidate_score": 0.7791
+    },
+    {
+      "job_id": "JOB-T17-002",
+      "top_candidates": [
+        {
+          "student_id": "STU-T17-002",
+          "score": 0.8904,
+          "rank": 1
+        },
+        {
+          "student_id": "STU-T17-005",
+          "score": 0.5912,
+          "rank": 2
+        }
+      ],
+      "avg_candidate_score": 0.7408
+    },
+    {
+      "job_id": "JOB-T17-003",
+      "top_candidates": [
+        {
+          "student_id": "STU-T17-003",
+          "score": 0.8904,
+          "rank": 1
+        },
+        {
+          "student_id": "STU-T17-001",
+          "score": 0.682,
+          "rank": 2
+        }
+      ],
+      "avg_candidate_score": 0.7862
+    },
+    {
+      "job_id": "JOB-T17-004",
+      "top_candidates": [
+        {
+          "student_id": "STU-T17-004",
+          "score": 0.7957,
+          "rank": 1
+        },
+        {
+          "student_id": "STU-T17-005",
+          "score": 0.6869,
+          "rank": 2
+        }
+      ],
+      "avg_candidate_score": 0.7413
+    },
+    {
+      "job_id": "JOB-T17-005",
+      "top_candidates": [
+        {
+          "student_id": "STU-T17-005",
+          "score": 0.8904,
+          "rank": 1
+        },
+        {
+          "student_id": "STU-T17-003",
+          "score": 0.6239,
+          "rank": 2
+        }
+      ],
+      "avg_candidate_score": 0.7571
+    }
+  ],
+  "college_summary": {
+    "avg_cohort_score": 0.6566,
+    "placement_ready_count": 6,
+    "placement_ready_pct": 100.0,
+    "top_skill_gap": "none",
+    "skill_gap_detail": {}
+  }
+}

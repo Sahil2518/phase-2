@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PlaceMux Rec v1 — Placement Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#0d0d1a;background-image:radial-gradient(ellipse at top,#1a053380 0%,#0d0d1a 70%);color:#e2e8f0;min-height:100vh;padding:1.5rem}
+h2{font-size:1.1rem;font-weight:600;color:#a78bfa;margin-bottom:1rem;letter-spacing:.04em;text-transform:uppercase}
+.header{background:linear-gradient(135deg,#4f46e5,#7c3aed,#a855f7);border-radius:16px;padding:1.75rem 2rem;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.header::after{content:'';position:absolute;top:-60px;right:-60px;width:250px;height:250px;border-radius:50%;background:rgba(255,255,255,.07)}
+.header h1{font-size:1.6rem;font-weight:700;color:#fff;position:relative}
+.header p{color:rgba(255,255,255,.75);font-size:.85rem;margin-top:.3rem;position:relative}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:1.5rem}
+.stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.25rem;text-align:center}
+.stat-val{font-size:2rem;font-weight:700;color:#a78bfa}
+.stat-lbl{font-size:.75rem;color:#94a3b8;margin-top:.3rem;text-transform:uppercase;letter-spacing:.05em}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;backdrop-filter:blur(8px)}
+.heatmap-wrap{overflow-x:auto}
+table.hm{width:100%;border-collapse:collapse;font-size:.85rem}
+table.hm th{background:rgba(124,58,237,.3);padding:.5rem .7rem;color:#a78bfa;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+table.hm td{padding:.55rem .7rem;text-align:center;font-weight:600;border:1px solid rgba(255,255,255,.05);transition:transform .15s}
+table.hm td:hover{transform:scale(1.1);z-index:1;position:relative;box-shadow:0 0 12px rgba(167,139,250,.4)}
+.row-label{text-align:left!important;color:#94a3b8;font-size:.75rem;font-weight:500;background:#0d0d1a!important;white-space:nowrap}
+.recs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.stu-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:1rem}
+.stu-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
+.stu-id{font-weight:600;font-size:.85rem;color:#c4b5fd}
+.badge{font-size:.7rem;padding:.2rem .6rem;border-radius:20px;font-weight:600}
+.badge-ready{background:rgba(34,197,94,.2);color:#4ade80;border:1px solid rgba(34,197,94,.3)}
+.badge-warn{background:rgba(245,158,11,.2);color:#fbbf24;border:1px solid rgba(245,158,11,.3)}
+.stu-avg{font-size:.78rem;color:#94a3b8;margin-bottom:.6rem}
+.rec-job{display:flex;gap:.5rem;align-items:center;padding:.3rem .5rem;border-radius:6px;background:rgba(255,255,255,.04);margin-bottom:.3rem;font-size:.8rem}
+.rank{color:#a78bfa;font-weight:700;min-width:20px}
+.jid{flex:1;color:#e2e8f0}
+.score{color:#4ade80;font-weight:600}
+table.sl{width:100%;border-collapse:collapse;font-size:.85rem}
+table.sl th{background:rgba(124,58,237,.25);padding:.5rem .8rem;color:#a78bfa;text-align:left;font-size:.75rem;text-transform:uppercase}
+table.sl td{padding:.5rem .8rem;border-bottom:1px solid rgba(255,255,255,.06);color:#cbd5e1}
+.gap-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.gap-label{width:120px;font-size:.8rem;color:#94a3b8;text-align:right;flex-shrink:0}
+.gap-track{flex:1;background:rgba(255,255,255,.06);border-radius:6px;height:26px;overflow:hidden}
+.gap-fill{height:100%;background:linear-gradient(90deg,#7c3aed,#4f46e5);display:flex;align-items:center;padding:0 .5rem;font-size:.75rem;color:#fff;font-weight:600;min-width:24px;border-radius:6px;transition:width .5s ease}
+.footer{text-align:center;color:#475569;font-size:.75rem;margin-top:2rem}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🎓 PlaceMux — Placement Dashboard</h1>
+  <p>Recommendation v1 · Task 17 · Generated 2026-07-27 11:48:22</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-val">6</div><div class="stat-lbl">Students</div></div>
+  <div class="stat"><div class="stat-val">5</div><div class="stat-lbl">Jobs Evaluated</div></div>
+  <div class="stat"><div class="stat-val">0.657</div><div class="stat-lbl">Avg Match Score</div></div>
+  <div class="stat"><div class="stat-val">100%</div><div class="stat-lbl">Placement Ready</div></div>
+  <div class="stat"><div class="stat-val">6/6</div><div class="stat-lbl">Ready Count</div></div>
+  <div class="stat"><div class="stat-val" style="font-size:1.1rem">none</div><div class="stat-lbl">Top Skill Gap</div></div>
+</div>
+
+<div class="card">
+  <h2>📊 Student × Job Match Heatmap</h2>
+  <div class="heatmap-wrap">
+  <table class="hm">
+    <thead><tr><th>Student</th><th>JOB-T17-001</th><th>JOB-T17-002</th><th>JOB-T17-003</th><th>JOB-T17-004</th><th>JOB-T17-005</th></tr></thead>
+    <tbody><tr><td class='row-label'>STU-T17-001</td><td style="background:hsl(106,70%,38%);color:white">0.89</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(81,70%,38%);color:white">0.68</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(70,70%,38%);color:#111">0.58</td></tr><tr><td class='row-label'>STU-T17-002</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(106,70%,38%);color:white">0.89</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(70,70%,38%);color:#111">0.58</td><td style="background:hsl(61,70%,38%);color:#111">0.51</td></tr><tr><td class='row-label'>STU-T17-003</td><td style="background:hsl(75,70%,38%);color:#111">0.63</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(106,70%,38%);color:white">0.89</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(74,70%,38%);color:#111">0.62</td></tr><tr><td class='row-label'>STU-T17-004</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(55,70%,38%);color:#111">0.46</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(95,70%,38%);color:white">0.80</td><td style="background:hsl(57,70%,38%);color:#111">0.48</td></tr><tr><td class='row-label'>STU-T17-005</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(70,70%,38%);color:#111">0.59</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(82,70%,38%);color:white">0.69</td><td style="background:hsl(106,70%,38%);color:white">0.89</td></tr><tr><td class='row-label'>STU-T17-006</td><td style="background:hsl(80,70%,38%);color:white">0.67</td><td style="background:#1e1e3a;color:white">-</td><td style="background:hsl(59,70%,38%);color:#111">0.49</td><td style="background:hsl(55,70%,38%);color:#111">0.46</td><td style="background:#1e1e3a;color:white">-</td></tr></tbody>
+  </table>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🏆 Top Recommendations per Student</h2>
+  <div class="recs-grid"><div class='stu-card'>
+          <div class='stu-header'>
+            <span class='stu-id'>STU-T17-001</span>
+            <span class='badge badge-ready'>✅ Ready</span>
+          </div>
+          <div class='stu-avg'>Avg Match: <b>0.719</b></div>
+          <div class='rec-job'>
+              <span class='rank'>#1</span>
+              <span class='jid'>JOB-T17-001</span>
+              <span class='score'>0.890</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#2</span>
+              <span class='jid'>JOB-T17-003</span>
+              <span class='score'>0.682</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#3</span>
+              <span class='jid'>JOB-T17-005</span>
+              <span class='score'>0.584</span>
+            </div>
+        </div><div class='stu-card'>
+          <div class='stu-header'>
+            <span class='stu-id'>STU-T17-002</span>
+            <span class='badge badge-ready'>✅ Ready</span>
+          </div>
+          <div class='stu-avg'>Avg Match: <b>0.663</b></div>
+          <div class='rec-job'>
+              <span class='rank'>#1</span>
+              <span class='jid'>JOB-T17-002</span>
+              <span class='score'>0.890</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#2</span>
+              <span class='jid'>JOB-T17-004</span>
+              <span class='score'>0.584</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#3</span>
+              <span class='jid'>JOB-T17-005</span>
+              <span class='score'>0.514</span>
+            </div>
+        </div><div class='stu-card'>
+          <div class='stu-header'>
+            <span class='stu-id'>STU-T17-003</span>
+            <span class='badge badge-ready'>✅ Ready</span>
+          </div>
+          <div class='stu-avg'>Avg Match: <b>0.714</b></div>
+          <div class='rec-job'>
+              <span class='rank'>#1</span>
+              <span class='jid'>JOB-T17-003</span>
+              <span class='score'>0.890</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#2</span>
+              <span class='jid'>JOB-T17-001</span>
+              <span class='score'>0.628</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#3</span>
+              <span class='jid'>JOB-T17-005</span>
+              <span class='score'>0.624</span>
+            </div>
+        </div><div class='stu-card'>
+          <div class='stu-header'>
+            <span class='stu-id'>STU-T17-004</span>
+            <span class='badge badge-ready'>✅ Ready</span>
+          </div>
+          <div class='stu-avg'>Avg Match: <b>0.581</b></div>
+          <div class='rec-job'>
+              <span class='rank'>#1</span>
+              <span class='jid'>JOB-T17-004</span>
+              <span class='score'>0.796</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#2</span>
+              <span class='jid'>JOB-T17-005</span>
+              <span class='score'>0.483</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#3</span>
+              <span class='jid'>JOB-T17-002</span>
+              <span class='score'>0.464</span>
+            </div>
+        </div><div class='stu-card'>
+          <div class='stu-header'>
+            <span class='stu-id'>STU-T17-005</span>
+            <span class='badge badge-ready'>✅ Ready</span>
+          </div>
+          <div class='stu-avg'>Avg Match: <b>0.723</b></div>
+          <div class='rec-job'>
+              <span class='rank'>#1</span>
+              <span class='jid'>JOB-T17-005</span>
+              <span class='score'>0.890</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#2</span>
+              <span class='jid'>JOB-T17-004</span>
+              <span class='score'>0.687</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#3</span>
+              <span class='jid'>JOB-T17-002</span>
+              <span class='score'>0.591</span>
+            </div>
+        </div><div class='stu-card'>
+          <div class='stu-header'>
+            <span class='stu-id'>STU-T17-006</span>
+            <span class='badge badge-ready'>✅ Ready</span>
+          </div>
+          <div class='stu-avg'>Avg Match: <b>0.540</b></div>
+          <div class='rec-job'>
+              <span class='rank'>#1</span>
+              <span class='jid'>JOB-T17-001</span>
+              <span class='score'>0.668</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#2</span>
+              <span class='jid'>JOB-T17-003</span>
+              <span class='score'>0.492</span>
+            </div><div class='rec-job'>
+              <span class='rank'>#3</span>
+              <span class='jid'>JOB-T17-004</span>
+              <span class='score'>0.460</span>
+            </div>
+        </div></div>
+</div>
+
+<div class="card">
+  <h2>📋 Job Shortlists</h2>
+  <table class="sl">
+    <thead><tr><th>Job</th><th>Top Candidates (score)</th><th>Avg Score</th></tr></thead>
+    <tbody><tr><td>JOB-T17-001</td><td>STU-T17-001 (0.890), STU-T17-006 (0.668)</td><td>0.779</td></tr><tr><td>JOB-T17-002</td><td>STU-T17-002 (0.890), STU-T17-005 (0.591)</td><td>0.741</td></tr><tr><td>JOB-T17-003</td><td>STU-T17-003 (0.890), STU-T17-001 (0.682)</td><td>0.786</td></tr><tr><td>JOB-T17-004</td><td>STU-T17-004 (0.796), STU-T17-005 (0.687)</td><td>0.741</td></tr><tr><td>JOB-T17-005</td><td>STU-T17-005 (0.890), STU-T17-003 (0.624)</td><td>0.757</td></tr></tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>🔍 Skill Gap Analysis</h2>
+  <p style="font-size:.8rem;color:#64748b;margin-bottom:1rem">Required skills not covered by any student in the cohort</p>
+  <p style="color:#4ade80">No skill gaps detected!</p>
+</div>
+
+<div class="footer">PlaceMux Phase 2 · Task 17 · Altrodav Technologies Pvt. Ltd.</div>
+</body></html>

@@ -1,0 +1,15 @@
+{
+  "cohort_rec_count": 6,
+  "cohort_rec": "PASS",
+  "shortlists_count": 5,
+  "shortlists": "PASS",
+  "report_file": "PASS",
+  "metrics_file": "PASS",
+  "heatmap_file": "PASS",
+  "dashboard_file": "PASS",
+  "rec_api_import": "PASS",
+  "avg_cohort_score": 0.6566,
+  "score_sanity": "PASS",
+  "timestamp": "2026-07-27T11:48:24.556909",
+  "summary": "8/8 checks passed"
+}
