@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PlaceMux Admin Console — Review Queue</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; padding: 2rem; }
+.header { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; }
+.header h1 { font-size: 1.5rem; color: #e2e8f0; font-weight: 600; }
+.stats { display: flex; gap: 1rem; }
+.stat-badge { background: #1e293b; border: 1px solid #475569; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem; color: #94a3b8; }
+.stat-badge strong { color: #f8fafc; font-size: 1rem; margin-left: 0.5rem; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; }
+.card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.card-header { padding: 1.25rem; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; }
+.match-title { font-size: 1.1rem; font-weight: 600; color: #f8fafc; }
+.match-subtitle { font-size: 0.875rem; color: #94a3b8; margin-top: 0.25rem; }
+.tier-badge { padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.25rem; }
+
+.card-body { padding: 1.25rem; flex: 1; }
+.narrative { font-size: 0.95rem; line-height: 1.5; color: #cbd5e1; margin-bottom: 1.5rem; background: #0f172a; padding: 1rem; border-radius: 8px; border-left: 4px solid #6366f1; }
+
+.section-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.75rem; font-weight: 600; }
+
+.feature-bar { margin-bottom: 0.75rem; }
+.feature-labels { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem; }
+.feature-name { color: #94a3b8; }
+.feature-val { font-weight: 600; }
+.track { width: 100%; background: #0f172a; height: 6px; border-radius: 3px; overflow: hidden; }
+.fill { height: 100%; border-radius: 3px; }
+
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+.skill-list { list-style: none; }
+.skill-list li { font-size: 0.85rem; padding: 0.25rem 0; display: flex; align-items: center; gap: 0.5rem; }
+.skill-present { color: #4ade80; }
+.skill-missing { color: #ef4444; }
+
+.upskilling { background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px; padding: 1rem; }
+.upskilling ul { list-style: none; margin-top: 0.5rem; }
+.upskilling li { font-size: 0.85rem; color: #a5b4fc; padding: 0.25rem 0; display: flex; align-items: flex-start; gap: 0.5rem; }
+.upskilling li::before { content: '💡'; font-size: 0.9rem; }
+
+.footer { text-align: center; margin-top: 3rem; font-size: 0.875rem; color: #64748b; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Admin Console — Review Queue</h1>
+    <p style="color: #94a3b8; font-size: 0.875rem; margin-top: 0.25rem;">Task 18 Explainability Report · Generated 2026-07-27 12:21:39</p>
+  </div>
+  <div class="stats">
+    <div class="stat-badge">Total Matches Evaluated <strong>12</strong></div>
+    <div class="stat-badge">Shortlisted <strong>3</strong></div>
+  </div>
+</div>
+
+<div class="grid">
+  
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-001 → JOB-T18-001</div>
+                    <div class="match-subtitle">Percentile: 1.00 | Rank: 1/4</div>
+                </div>
+                <div class='tier-badge' style='background: #22c55e22; color: #22c55e; border: 1px solid #22c55e44;'> Excellent (0.89)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-001 is a excellent match for JOB-T18-001 with an AI relevance score of 89% (high confidence). Key strengths driving this score are Skill Match and Salary Alignment. This candidate meets all requirements and is recommended for shortlisting.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Skill Match</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #4ade80'>0.62</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 62.5%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Education Requirement</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (100%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"><li class='skill-present'>✓ python</li><li class='skill-present'>✓ tensorflow</li><li class='skill-present'>✓ sql</li><li class='skill-present'>✓ docker</li></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li style='color: #94a3b8;'>None missing</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>All required skills are met — focus on preferred skills to boost your score.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-003 → JOB-T18-001</div>
+                    <div class="match-subtitle">Percentile: 0.67 | Rank: 2/4</div>
+                </div>
+                <div class='tier-badge' style='background: #84cc1622; color: #84cc16; border: 1px solid #84cc1644;'> Good (0.69)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-003 is a good match for JOB-T18-001 with an AI relevance score of 69% (medium confidence). Key strengths driving this score are Experience Fit and Salary Alignment. Missing required skill(s): tensorflow, sql — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Skill Match</span>
+                    <span class='feature-val' style='color: #94a3b8'>0.50</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 50.0%; background: #94a3b8;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Coding Proficiency</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (50%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"><li class='skill-present'>✓ python</li><li class='skill-present'>✓ docker</li></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ tensorflow</li><li class='skill-missing'>✗ sql</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'tensorflow' to unlock 1 additional job(s) in the pool.</li><li>Add 'sql' to unlock 1 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-004 → JOB-T18-001</div>
+                    <div class="match-subtitle">Percentile: 0.33 | Rank: 3/4</div>
+                </div>
+                <div class='tier-badge' style='background: #ef444422; color: #ef4444; border: 1px solid #ef444444;'> Poor (0.35)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-004 is a poor match for JOB-T18-001 with an AI relevance score of 35% (low confidence). Key strengths driving this score are Salary Alignment and Communication Proficiency. Missing required skill(s): python, tensorflow, sql — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #94a3b8'>0.50</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 50.0%; background: #94a3b8;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Communication Proficiency</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Skill Match</span>
+                    <span class='feature-val' style='color: #ef4444'>0.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 0%; background: #ef4444;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (0%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ python</li><li class='skill-missing'>✗ tensorflow</li><li class='skill-missing'>✗ sql</li><li class='skill-missing'>✗ docker</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'python' to unlock 2 additional job(s) in the pool.</li><li>Add 'tensorflow' to unlock 1 additional job(s) in the pool.</li><li>Add 'sql' to unlock 1 additional job(s) in the pool.</li><li>Add 'docker' to unlock 2 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-002 → JOB-T18-001</div>
+                    <div class="match-subtitle">Percentile: 0.00 | Rank: 4/4</div>
+                </div>
+                <div class='tier-badge' style='background: #ef444422; color: #ef4444; border: 1px solid #ef444444;'> Poor (0.32)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-002 is a poor match for JOB-T18-001 with an AI relevance score of 32% (low confidence). Key strengths driving this score are Salary Alignment and Communication Proficiency. Missing required skill(s): python, tensorflow, sql — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #ef4444'>0.38</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 37.5%; background: #ef4444;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Communication Proficiency</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Skill Match</span>
+                    <span class='feature-val' style='color: #ef4444'>0.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 0%; background: #ef4444;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (0%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ python</li><li class='skill-missing'>✗ tensorflow</li><li class='skill-missing'>✗ sql</li><li class='skill-missing'>✗ docker</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'python' to unlock 2 additional job(s) in the pool.</li><li>Add 'tensorflow' to unlock 1 additional job(s) in the pool.</li><li>Add 'sql' to unlock 1 additional job(s) in the pool.</li><li>Add 'docker' to unlock 2 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-002 → JOB-T18-002</div>
+                    <div class="match-subtitle">Percentile: 1.00 | Rank: 1/4</div>
+                </div>
+                <div class='tier-badge' style='background: #84cc1622; color: #84cc16; border: 1px solid #84cc1644;'> Good (0.78)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-002 is a good match for JOB-T18-002 with an AI relevance score of 78% (high confidence). Key strengths driving this score are Skill Match and Salary Alignment. Missing required skill(s): mongodb — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Skill Match</span>
+                    <span class='feature-val' style='color: #4ade80'>0.75</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 75.0%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #4ade80'>0.62</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 62.5%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Education Requirement</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (75%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"><li class='skill-present'>✓ javascript</li><li class='skill-present'>✓ react</li><li class='skill-present'>✓ node.js</li></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ mongodb</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'mongodb' to unlock 1 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-001 → JOB-T18-002</div>
+                    <div class="match-subtitle">Percentile: 0.67 | Rank: 2/4</div>
+                </div>
+                <div class='tier-badge' style='background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b44;'> Fair (0.51)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-001 is a fair match for JOB-T18-002 with an AI relevance score of 51% (high confidence). Key strengths driving this score are Experience Fit and Salary Alignment. Missing required skill(s): javascript, react, node.js — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #4ade80'>0.88</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 87.5%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>0.91</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 90.91%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Education Requirement</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Coding Proficiency</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (0%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ javascript</li><li class='skill-missing'>✗ react</li><li class='skill-missing'>✗ node.js</li><li class='skill-missing'>✗ mongodb</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'javascript' to unlock 1 additional job(s) in the pool.</li><li>Add 'react' to unlock 1 additional job(s) in the pool.</li><li>Add 'node.js' to unlock 1 additional job(s) in the pool.</li><li>Add 'mongodb' to unlock 1 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-003 → JOB-T18-002</div>
+                    <div class="match-subtitle">Percentile: 0.33 | Rank: 3/4</div>
+                </div>
+                <div class='tier-badge' style='background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b44;'> Fair (0.50)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-003 is a fair match for JOB-T18-002 with an AI relevance score of 50% (high confidence). Key strengths driving this score are Experience Fit and Salary Alignment. Missing required skill(s): javascript, react, node.js — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>0.77</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 76.92%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Education Requirement</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Coding Proficiency</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (0%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ javascript</li><li class='skill-missing'>✗ react</li><li class='skill-missing'>✗ node.js</li><li class='skill-missing'>✗ mongodb</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'javascript' to unlock 1 additional job(s) in the pool.</li><li>Add 'react' to unlock 1 additional job(s) in the pool.</li><li>Add 'node.js' to unlock 1 additional job(s) in the pool.</li><li>Add 'mongodb' to unlock 1 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-004 → JOB-T18-002</div>
+                    <div class="match-subtitle">Percentile: 0.00 | Rank: 4/4</div>
+                </div>
+                <div class='tier-badge' style='background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b44;'> Fair (0.50)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-004 is a fair match for JOB-T18-002 with an AI relevance score of 50% (high confidence). Key strengths driving this score are Salary Alignment and Experience Fit. Missing required skill(s): javascript, react, node.js — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #4ade80'>0.75</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 75.0%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Education Requirement</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Coding Proficiency</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (0%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ javascript</li><li class='skill-missing'>✗ react</li><li class='skill-missing'>✗ node.js</li><li class='skill-missing'>✗ mongodb</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'javascript' to unlock 1 additional job(s) in the pool.</li><li>Add 'react' to unlock 1 additional job(s) in the pool.</li><li>Add 'node.js' to unlock 1 additional job(s) in the pool.</li><li>Add 'mongodb' to unlock 1 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-003 → JOB-T18-003</div>
+                    <div class="match-subtitle">Percentile: 1.00 | Rank: 1/4</div>
+                </div>
+                <div class='tier-badge' style='background: #22c55e22; color: #22c55e; border: 1px solid #22c55e44;'> Excellent (0.89)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-003 is a excellent match for JOB-T18-003 with an AI relevance score of 89% (high confidence). Key strengths driving this score are Skill Match and Salary Alignment. This candidate meets all requirements and is recommended for shortlisting.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Skill Match</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #4ade80'>0.62</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 62.5%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Education Requirement</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (100%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"><li class='skill-present'>✓ aws</li><li class='skill-present'>✓ docker</li><li class='skill-present'>✓ kubernetes</li><li class='skill-present'>✓ terraform</li><li class='skill-present'>✓ python</li></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li style='color: #94a3b8;'>None missing</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>All required skills are met — focus on preferred skills to boost your score.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-001 → JOB-T18-003</div>
+                    <div class="match-subtitle">Percentile: 0.67 | Rank: 2/4</div>
+                </div>
+                <div class='tier-badge' style='background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b44;'> Fair (0.55)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-001 is a fair match for JOB-T18-003 with an AI relevance score of 55% (medium confidence). Key strengths driving this score are Salary Alignment and Education Requirement. Missing required skill(s): aws, kubernetes, terraform — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Education Requirement</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Skill Match</span>
+                    <span class='feature-val' style='color: #94a3b8'>0.40</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 40.0%; background: #94a3b8;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Coding Proficiency</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (40%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"><li class='skill-present'>✓ docker</li><li class='skill-present'>✓ python</li></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ aws</li><li class='skill-missing'>✗ kubernetes</li><li class='skill-missing'>✗ terraform</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'aws' to unlock 1 additional job(s) in the pool.</li><li>Add 'kubernetes' to unlock 1 additional job(s) in the pool.</li><li>Add 'terraform' to unlock 1 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-004 → JOB-T18-003</div>
+                    <div class="match-subtitle">Percentile: 0.33 | Rank: 3/4</div>
+                </div>
+                <div class='tier-badge' style='background: #ef444422; color: #ef4444; border: 1px solid #ef444444;'> Poor (0.39)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-004 is a poor match for JOB-T18-003 with an AI relevance score of 39% (medium confidence). Key strengths driving this score are Salary Alignment and Education Requirement. Missing required skill(s): aws, docker, kubernetes — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Education Requirement</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Coding Proficiency</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Experience Fit</span>
+                    <span class='feature-val' style='color: #ef4444'>0.12</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 12.5%; background: #ef4444;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (0%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ aws</li><li class='skill-missing'>✗ docker</li><li class='skill-missing'>✗ kubernetes</li><li class='skill-missing'>✗ terraform</li><li class='skill-missing'>✗ python</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'aws' to unlock 1 additional job(s) in the pool.</li><li>Add 'docker' to unlock 2 additional job(s) in the pool.</li><li>Add 'kubernetes' to unlock 1 additional job(s) in the pool.</li><li>Add 'terraform' to unlock 1 additional job(s) in the pool.</li><li>Add 'python' to unlock 2 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="match-title">STU-T18-002 → JOB-T18-003</div>
+                    <div class="match-subtitle">Percentile: 0.00 | Rank: 4/4</div>
+                </div>
+                <div class='tier-badge' style='background: #ef444422; color: #ef4444; border: 1px solid #ef444444;'> Poor (0.34)</div>
+            </div>
+            <div class="card-body">
+                <div class="narrative">STU-T18-002 is a poor match for JOB-T18-003 with an AI relevance score of 34% (medium confidence). Key strengths driving this score are Salary Alignment and Education Requirement. Missing required skill(s): aws, docker, kubernetes — upskilling in these areas would materially improve the match.</div>
+                
+                <div class="section-title">Key Drivers</div>
+                
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Salary Alignment</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Education Requirement</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Communication Proficiency</span>
+                    <span class='feature-val' style='color: #4ade80'>1.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 100%; background: #4ade80;'></div></div>
+            </div>
+            
+            <div class='feature-bar'>
+                <div class='feature-labels'>
+                    <span class='feature-name'>Skill Match</span>
+                    <span class='feature-val' style='color: #ef4444'>0.00</span>
+                </div>
+                <div class='track'><div class='fill' style='width: 0%; background: #ef4444;'></div></div>
+            </div>
+            
+
+                <div class="section-title" style="margin-top:1.5rem;">Skill Coverage (0%)</div>
+                <div class="skills-grid">
+                    <div>
+                        <ul class="skill-list"></ul>
+                    </div>
+                    <div>
+                        <ul class="skill-list"><li class='skill-missing'>✗ aws</li><li class='skill-missing'>✗ docker</li><li class='skill-missing'>✗ kubernetes</li><li class='skill-missing'>✗ terraform</li><li class='skill-missing'>✗ python</li></ul>
+                    </div>
+                </div>
+
+                
+            <div class='section-title' style='margin-top:1.5rem;'>Actionable Upskilling</div>
+            <div class='upskilling'><ul><li>Add 'aws' to unlock 1 additional job(s) in the pool.</li><li>Add 'docker' to unlock 2 additional job(s) in the pool.</li><li>Add 'kubernetes' to unlock 1 additional job(s) in the pool.</li><li>Add 'terraform' to unlock 1 additional job(s) in the pool.</li><li>Add 'python' to unlock 2 additional job(s) in the pool.</li></ul></div>
+            
+            </div>
+        </div>
+        
+</div>
+
+<div class="footer">
+  PlaceMux Phase 2 · Task 18 · Altrodav Technologies Pvt. Ltd.
+</div>
+
+</body>
+</html>

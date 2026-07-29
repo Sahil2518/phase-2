@@ -1,0 +1,1478 @@
+{
+  "task": "Task 18",
+  "matches": [
+    {
+      "student_id": "STU-T18-001",
+      "job_id": "JOB-T18-001",
+      "score": 0.8904,
+      "match_tier": "Excellent",
+      "match_tier_color": "#22c55e",
+      "percentile_in_cohort": 1.0,
+      "rank_in_cohort": 1,
+      "cohort_size": 4,
+      "present_skills": [
+        "python",
+        "tensorflow",
+        "sql",
+        "docker"
+      ],
+      "missing_skills": [],
+      "skill_coverage_pct": 1.0,
+      "detailed_narrative": "STU-T18-001 is a excellent match for JOB-T18-001 with an AI relevance score of 89% (high confidence). Key strengths driving this score are Skill Match and Salary Alignment. This candidate meets all requirements and is recommended for shortlisting.",
+      "upskilling_recs": [
+        "All required skills are met \u2014 focus on preferred skills to boost your score."
+      ],
+      "summary": "Excellent match (score: 89%), driven by Skill Match (31%) and Salary Alignment (19%).",
+      "confidence": "high",
+      "shortlist": true,
+      "shortlist_reason": "Strong match (score=0.89) with all 4 requirements satisfied",
+      "low_fit_warning": false,
+      "strengths": [
+        {
+          "label": "Skill Match",
+          "value": 1.0,
+          "contribution": 0.3098
+        },
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.1908
+        },
+        {
+          "label": "Experience Fit",
+          "value": 0.625,
+          "contribution": 0.1415
+        },
+        {
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1248
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1168
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0717
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0446
+        }
+      ],
+      "weaknesses": [],
+      "neutral": [],
+      "feature_contributions": [
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 1.0,
+          "contribution": 0.3098,
+          "verdict": "strength"
+        },
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.1908,
+          "verdict": "strength"
+        },
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.625,
+          "contribution": 0.1415,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1248,
+          "verdict": "strength"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1168,
+          "verdict": "strength"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0717,
+          "verdict": "strength"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0446,
+          "verdict": "strength"
+        }
+      ],
+      "factors_met": 4,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-003",
+      "job_id": "JOB-T18-001",
+      "score": 0.6862,
+      "match_tier": "Good",
+      "match_tier_color": "#84cc16",
+      "percentile_in_cohort": 0.667,
+      "rank_in_cohort": 2,
+      "cohort_size": 4,
+      "present_skills": [
+        "python",
+        "docker"
+      ],
+      "missing_skills": [
+        "tensorflow",
+        "sql"
+      ],
+      "skill_coverage_pct": 0.5,
+      "detailed_narrative": "STU-T18-003 is a good match for JOB-T18-001 with an AI relevance score of 69% (medium confidence). Key strengths driving this score are Experience Fit and Salary Alignment. Missing required skill(s): tensorflow, sql \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'tensorflow' to unlock 1 additional job(s) in the pool.",
+        "Add 'sql' to unlock 1 additional job(s) in the pool."
+      ],
+      "summary": "Strong match (score: 69%), driven by Experience Fit (30%) and Salary Alignment (25%), held back by Education Requirement.",
+      "confidence": "medium",
+      "shortlist": false,
+      "shortlist_reason": "2 critical requirement(s) not met: Education Requirement, Location Compatibility",
+      "low_fit_warning": false,
+      "strengths": [
+        {
+          "label": "Experience Fit",
+          "value": 1.0,
+          "contribution": 0.2977
+        },
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.2508
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1535
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0943
+        }
+      ],
+      "weaknesses": [
+        {
+          "label": "Education Requirement",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0
+        }
+      ],
+      "neutral": [
+        {
+          "label": "Skill Match",
+          "value": 0.5,
+          "contribution": 0.2036
+        }
+      ],
+      "feature_contributions": [
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 1.0,
+          "contribution": 0.2977,
+          "verdict": "strength"
+        },
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.2508,
+          "verdict": "strength"
+        },
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.5,
+          "contribution": 0.2036,
+          "verdict": "neutral"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1535,
+          "verdict": "strength"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0943,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        }
+      ],
+      "factors_met": 2,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-004",
+      "job_id": "JOB-T18-001",
+      "score": 0.3496,
+      "match_tier": "Poor",
+      "match_tier_color": "#ef4444",
+      "percentile_in_cohort": 0.333,
+      "rank_in_cohort": 3,
+      "cohort_size": 4,
+      "present_skills": [],
+      "missing_skills": [
+        "python",
+        "tensorflow",
+        "sql",
+        "docker"
+      ],
+      "skill_coverage_pct": 0.0,
+      "detailed_narrative": "STU-T18-004 is a poor match for JOB-T18-001 with an AI relevance score of 35% (low confidence). Key strengths driving this score are Salary Alignment and Communication Proficiency. Missing required skill(s): python, tensorflow, sql \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'python' to unlock 2 additional job(s) in the pool.",
+        "Add 'tensorflow' to unlock 1 additional job(s) in the pool.",
+        "Add 'sql' to unlock 1 additional job(s) in the pool.",
+        "Add 'docker' to unlock 2 additional job(s) in the pool."
+      ],
+      "summary": "Weak match (score: 35%), driven by Salary Alignment (51%) and Communication Proficiency (19%), held back by Skill Match.",
+      "confidence": "low",
+      "shortlist": false,
+      "shortlist_reason": "Score (0.35) below minimum threshold (0.65)",
+      "low_fit_warning": true,
+      "strengths": [
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.5077
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.1909
+        }
+      ],
+      "weaknesses": [
+        {
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Education Requirement",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0
+        }
+      ],
+      "neutral": [
+        {
+          "label": "Experience Fit",
+          "value": 0.5,
+          "contribution": 0.3014
+        }
+      ],
+      "feature_contributions": [
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.5077,
+          "verdict": "strength"
+        },
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.5,
+          "contribution": 0.3014,
+          "verdict": "neutral"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.1909,
+          "verdict": "strength"
+        },
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        }
+      ],
+      "factors_met": 1,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-002",
+      "job_id": "JOB-T18-001",
+      "score": 0.3227,
+      "match_tier": "Poor",
+      "match_tier_color": "#ef4444",
+      "percentile_in_cohort": 0.0,
+      "rank_in_cohort": 4,
+      "cohort_size": 4,
+      "present_skills": [],
+      "missing_skills": [
+        "python",
+        "tensorflow",
+        "sql",
+        "docker"
+      ],
+      "skill_coverage_pct": 0.0,
+      "detailed_narrative": "STU-T18-002 is a poor match for JOB-T18-001 with an AI relevance score of 32% (low confidence). Key strengths driving this score are Salary Alignment and Communication Proficiency. Missing required skill(s): python, tensorflow, sql \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'python' to unlock 2 additional job(s) in the pool.",
+        "Add 'tensorflow' to unlock 1 additional job(s) in the pool.",
+        "Add 'sql' to unlock 1 additional job(s) in the pool.",
+        "Add 'docker' to unlock 2 additional job(s) in the pool."
+      ],
+      "summary": "Weak match (score: 32%), driven by Salary Alignment (55%) and Communication Proficiency (21%), held back by Experience Fit.",
+      "confidence": "low",
+      "shortlist": false,
+      "shortlist_reason": "Score (0.32) below minimum threshold (0.65)",
+      "low_fit_warning": true,
+      "strengths": [
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.5491
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.2065
+        }
+      ],
+      "weaknesses": [
+        {
+          "label": "Experience Fit",
+          "value": 0.375,
+          "contribution": 0.2444
+        },
+        {
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Education Requirement",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0
+        }
+      ],
+      "neutral": [],
+      "feature_contributions": [
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.5491,
+          "verdict": "strength"
+        },
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.375,
+          "contribution": 0.2444,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.2065,
+          "verdict": "strength"
+        },
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        }
+      ],
+      "factors_met": 1,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-002",
+      "job_id": "JOB-T18-002",
+      "score": 0.7833,
+      "match_tier": "Good",
+      "match_tier_color": "#84cc16",
+      "percentile_in_cohort": 1.0,
+      "rank_in_cohort": 1,
+      "cohort_size": 4,
+      "present_skills": [
+        "javascript",
+        "react",
+        "node.js"
+      ],
+      "missing_skills": [
+        "mongodb"
+      ],
+      "skill_coverage_pct": 0.75,
+      "detailed_narrative": "STU-T18-002 is a good match for JOB-T18-002 with an AI relevance score of 78% (high confidence). Key strengths driving this score are Skill Match and Salary Alignment. Missing required skill(s): mongodb \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'mongodb' to unlock 1 additional job(s) in the pool."
+      ],
+      "summary": "Strong match (score: 78%), driven by Skill Match (25%) and Salary Alignment (21%).",
+      "confidence": "high",
+      "shortlist": true,
+      "shortlist_reason": "Strong match (score=0.78) with all 4 requirements satisfied",
+      "low_fit_warning": false,
+      "strengths": [
+        {
+          "label": "Skill Match",
+          "value": 0.75,
+          "contribution": 0.2518
+        },
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.2068
+        },
+        {
+          "label": "Experience Fit",
+          "value": 0.625,
+          "contribution": 0.1534
+        },
+        {
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1352
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1266
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0778
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0484
+        }
+      ],
+      "weaknesses": [],
+      "neutral": [],
+      "feature_contributions": [
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.75,
+          "contribution": 0.2518,
+          "verdict": "strength"
+        },
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.2068,
+          "verdict": "strength"
+        },
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.625,
+          "contribution": 0.1534,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1352,
+          "verdict": "strength"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1266,
+          "verdict": "strength"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0778,
+          "verdict": "strength"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0484,
+          "verdict": "strength"
+        }
+      ],
+      "factors_met": 4,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-001",
+      "job_id": "JOB-T18-002",
+      "score": 0.5065,
+      "match_tier": "Fair",
+      "match_tier_color": "#f59e0b",
+      "percentile_in_cohort": 0.667,
+      "rank_in_cohort": 2,
+      "cohort_size": 4,
+      "present_skills": [],
+      "missing_skills": [
+        "javascript",
+        "react",
+        "node.js",
+        "mongodb"
+      ],
+      "skill_coverage_pct": 0.0,
+      "detailed_narrative": "STU-T18-001 is a fair match for JOB-T18-002 with an AI relevance score of 51% (high confidence). Key strengths driving this score are Experience Fit and Salary Alignment. Missing required skill(s): javascript, react, node.js \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'javascript' to unlock 1 additional job(s) in the pool.",
+        "Add 'react' to unlock 1 additional job(s) in the pool.",
+        "Add 'node.js' to unlock 1 additional job(s) in the pool.",
+        "Add 'mongodb' to unlock 1 additional job(s) in the pool."
+      ],
+      "summary": "Moderate match (score: 51%), driven by Experience Fit (27%) and Salary Alignment (24%), held back by Skill Match.",
+      "confidence": "high",
+      "shortlist": false,
+      "shortlist_reason": "Score (0.51) below minimum threshold (0.65)",
+      "low_fit_warning": false,
+      "strengths": [
+        {
+          "label": "Experience Fit",
+          "value": 0.875,
+          "contribution": 0.2716
+        },
+        {
+          "label": "Salary Alignment",
+          "value": 0.9091,
+          "contribution": 0.2377
+        },
+        {
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.171
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.16
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0984
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0612
+        }
+      ],
+      "weaknesses": [
+        {
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0
+        }
+      ],
+      "neutral": [],
+      "feature_contributions": [
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.875,
+          "contribution": 0.2716,
+          "verdict": "strength"
+        },
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 0.9091,
+          "contribution": 0.2377,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.171,
+          "verdict": "strength"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.16,
+          "verdict": "strength"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0984,
+          "verdict": "strength"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0612,
+          "verdict": "strength"
+        },
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        }
+      ],
+      "factors_met": 4,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-003",
+      "job_id": "JOB-T18-002",
+      "score": 0.5024,
+      "match_tier": "Fair",
+      "match_tier_color": "#f59e0b",
+      "percentile_in_cohort": 0.333,
+      "rank_in_cohort": 3,
+      "cohort_size": 4,
+      "present_skills": [],
+      "missing_skills": [
+        "javascript",
+        "react",
+        "node.js",
+        "mongodb"
+      ],
+      "skill_coverage_pct": 0.0,
+      "detailed_narrative": "STU-T18-003 is a fair match for JOB-T18-002 with an AI relevance score of 50% (high confidence). Key strengths driving this score are Experience Fit and Salary Alignment. Missing required skill(s): javascript, react, node.js \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'javascript' to unlock 1 additional job(s) in the pool.",
+        "Add 'react' to unlock 1 additional job(s) in the pool.",
+        "Add 'node.js' to unlock 1 additional job(s) in the pool.",
+        "Add 'mongodb' to unlock 1 additional job(s) in the pool."
+      ],
+      "summary": "Moderate match (score: 50%), driven by Experience Fit (31%) and Salary Alignment (20%), held back by Skill Match.",
+      "confidence": "high",
+      "shortlist": false,
+      "shortlist_reason": "Score (0.50) below minimum threshold (0.65)",
+      "low_fit_warning": false,
+      "strengths": [
+        {
+          "label": "Experience Fit",
+          "value": 1.0,
+          "contribution": 0.3098
+        },
+        {
+          "label": "Salary Alignment",
+          "value": 0.7692,
+          "contribution": 0.2007
+        },
+        {
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1706
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1597
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0981
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0611
+        }
+      ],
+      "weaknesses": [
+        {
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0
+        }
+      ],
+      "neutral": [],
+      "feature_contributions": [
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 1.0,
+          "contribution": 0.3098,
+          "verdict": "strength"
+        },
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 0.7692,
+          "contribution": 0.2007,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1706,
+          "verdict": "strength"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1597,
+          "verdict": "strength"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0981,
+          "verdict": "strength"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0611,
+          "verdict": "strength"
+        },
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        }
+      ],
+      "factors_met": 4,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-004",
+      "job_id": "JOB-T18-002",
+      "score": 0.4997,
+      "match_tier": "Fair",
+      "match_tier_color": "#f59e0b",
+      "percentile_in_cohort": 0.0,
+      "rank_in_cohort": 4,
+      "cohort_size": 4,
+      "present_skills": [],
+      "missing_skills": [
+        "javascript",
+        "react",
+        "node.js",
+        "mongodb"
+      ],
+      "skill_coverage_pct": 0.0,
+      "detailed_narrative": "STU-T18-004 is a fair match for JOB-T18-002 with an AI relevance score of 50% (high confidence). Key strengths driving this score are Salary Alignment and Experience Fit. Missing required skill(s): javascript, react, node.js \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'javascript' to unlock 1 additional job(s) in the pool.",
+        "Add 'react' to unlock 1 additional job(s) in the pool.",
+        "Add 'node.js' to unlock 1 additional job(s) in the pool.",
+        "Add 'mongodb' to unlock 1 additional job(s) in the pool."
+      ],
+      "summary": "Moderate match (score: 50%), driven by Salary Alignment (30%) and Experience Fit (26%), held back by Skill Match.",
+      "confidence": "high",
+      "shortlist": false,
+      "shortlist_reason": "Score (0.50) below minimum threshold (0.65)",
+      "low_fit_warning": false,
+      "strengths": [
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.295
+        },
+        {
+          "label": "Experience Fit",
+          "value": 0.75,
+          "contribution": 0.2626
+        },
+        {
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1929
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1805
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.069
+        }
+      ],
+      "weaknesses": [
+        {
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 0.0,
+          "contribution": 0.0
+        }
+      ],
+      "neutral": [],
+      "feature_contributions": [
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.295,
+          "verdict": "strength"
+        },
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.75,
+          "contribution": 0.2626,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1929,
+          "verdict": "strength"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1805,
+          "verdict": "strength"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.069,
+          "verdict": "strength"
+        },
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        }
+      ],
+      "factors_met": 3,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-003",
+      "job_id": "JOB-T18-003",
+      "score": 0.8904,
+      "match_tier": "Excellent",
+      "match_tier_color": "#22c55e",
+      "percentile_in_cohort": 1.0,
+      "rank_in_cohort": 1,
+      "cohort_size": 4,
+      "present_skills": [
+        "aws",
+        "docker",
+        "kubernetes",
+        "terraform",
+        "python"
+      ],
+      "missing_skills": [],
+      "skill_coverage_pct": 1.0,
+      "detailed_narrative": "STU-T18-003 is a excellent match for JOB-T18-003 with an AI relevance score of 89% (high confidence). Key strengths driving this score are Skill Match and Salary Alignment. This candidate meets all requirements and is recommended for shortlisting.",
+      "upskilling_recs": [
+        "All required skills are met \u2014 focus on preferred skills to boost your score."
+      ],
+      "summary": "Excellent match (score: 89%), driven by Skill Match (31%) and Salary Alignment (19%).",
+      "confidence": "high",
+      "shortlist": true,
+      "shortlist_reason": "Strong match (score=0.89) with all 4 requirements satisfied",
+      "low_fit_warning": false,
+      "strengths": [
+        {
+          "label": "Skill Match",
+          "value": 1.0,
+          "contribution": 0.3098
+        },
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.1908
+        },
+        {
+          "label": "Experience Fit",
+          "value": 0.625,
+          "contribution": 0.1415
+        },
+        {
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1248
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1168
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0717
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0446
+        }
+      ],
+      "weaknesses": [],
+      "neutral": [],
+      "feature_contributions": [
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 1.0,
+          "contribution": 0.3098,
+          "verdict": "strength"
+        },
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.1908,
+          "verdict": "strength"
+        },
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.625,
+          "contribution": 0.1415,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.1248,
+          "verdict": "strength"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1168,
+          "verdict": "strength"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.0717,
+          "verdict": "strength"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 1.0,
+          "contribution": 0.0446,
+          "verdict": "strength"
+        }
+      ],
+      "factors_met": 4,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-001",
+      "job_id": "JOB-T18-003",
+      "score": 0.5483,
+      "match_tier": "Fair",
+      "match_tier_color": "#f59e0b",
+      "percentile_in_cohort": 0.667,
+      "rank_in_cohort": 2,
+      "cohort_size": 4,
+      "present_skills": [
+        "docker",
+        "python"
+      ],
+      "missing_skills": [
+        "aws",
+        "kubernetes",
+        "terraform"
+      ],
+      "skill_coverage_pct": 0.4,
+      "detailed_narrative": "STU-T18-001 is a fair match for JOB-T18-003 with an AI relevance score of 55% (medium confidence). Key strengths driving this score are Salary Alignment and Education Requirement. Missing required skill(s): aws, kubernetes, terraform \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'aws' to unlock 1 additional job(s) in the pool.",
+        "Add 'kubernetes' to unlock 1 additional job(s) in the pool.",
+        "Add 'terraform' to unlock 1 additional job(s) in the pool."
+      ],
+      "summary": "Moderate match (score: 55%), driven by Salary Alignment (31%) and Education Requirement (20%), held back by Experience Fit.",
+      "confidence": "medium",
+      "shortlist": false,
+      "shortlist_reason": "Score (0.55) below minimum threshold (0.65)",
+      "low_fit_warning": false,
+      "strengths": [
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.3113
+        },
+        {
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.2036
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1905
+        }
+      ],
+      "weaknesses": [
+        {
+          "label": "Experience Fit",
+          "value": 0.25,
+          "contribution": 0.0924
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0
+        }
+      ],
+      "neutral": [
+        {
+          "label": "Skill Match",
+          "value": 0.4,
+          "contribution": 0.2022
+        }
+      ],
+      "feature_contributions": [
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.3113,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.2036,
+          "verdict": "strength"
+        },
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.4,
+          "contribution": 0.2022,
+          "verdict": "neutral"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.1905,
+          "verdict": "strength"
+        },
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.25,
+          "contribution": 0.0924,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        }
+      ],
+      "factors_met": 2,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-004",
+      "job_id": "JOB-T18-003",
+      "score": 0.3889,
+      "match_tier": "Poor",
+      "match_tier_color": "#ef4444",
+      "percentile_in_cohort": 0.333,
+      "rank_in_cohort": 3,
+      "cohort_size": 4,
+      "present_skills": [],
+      "missing_skills": [
+        "aws",
+        "docker",
+        "kubernetes",
+        "terraform",
+        "python"
+      ],
+      "skill_coverage_pct": 0.0,
+      "detailed_narrative": "STU-T18-004 is a poor match for JOB-T18-003 with an AI relevance score of 39% (medium confidence). Key strengths driving this score are Salary Alignment and Education Requirement. Missing required skill(s): aws, docker, kubernetes \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'aws' to unlock 1 additional job(s) in the pool.",
+        "Add 'docker' to unlock 2 additional job(s) in the pool.",
+        "Add 'kubernetes' to unlock 1 additional job(s) in the pool.",
+        "Add 'terraform' to unlock 1 additional job(s) in the pool.",
+        "Add 'python' to unlock 2 additional job(s) in the pool."
+      ],
+      "summary": "Weak match (score: 39%), driven by Salary Alignment (41%) and Education Requirement (27%), held back by Experience Fit.",
+      "confidence": "medium",
+      "shortlist": false,
+      "shortlist_reason": "Score (0.39) below minimum threshold (0.65)",
+      "low_fit_warning": true,
+      "strengths": [
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.4142
+        },
+        {
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.2709
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.2535
+        }
+      ],
+      "weaknesses": [
+        {
+          "label": "Experience Fit",
+          "value": 0.125,
+          "contribution": 0.0615
+        },
+        {
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0
+        }
+      ],
+      "neutral": [],
+      "feature_contributions": [
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.4142,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.2709,
+          "verdict": "strength"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 1.0,
+          "contribution": 0.2535,
+          "verdict": "strength"
+        },
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.125,
+          "contribution": 0.0615,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        }
+      ],
+      "factors_met": 2,
+      "factors_total": 4
+    },
+    {
+      "student_id": "STU-T18-002",
+      "job_id": "JOB-T18-003",
+      "score": 0.3401,
+      "match_tier": "Poor",
+      "match_tier_color": "#ef4444",
+      "percentile_in_cohort": 0.0,
+      "rank_in_cohort": 4,
+      "cohort_size": 4,
+      "present_skills": [],
+      "missing_skills": [
+        "aws",
+        "docker",
+        "kubernetes",
+        "terraform",
+        "python"
+      ],
+      "skill_coverage_pct": 0.0,
+      "detailed_narrative": "STU-T18-002 is a poor match for JOB-T18-003 with an AI relevance score of 34% (medium confidence). Key strengths driving this score are Salary Alignment and Education Requirement. Missing required skill(s): aws, docker, kubernetes \u2014 upskilling in these areas would materially improve the match.",
+      "upskilling_recs": [
+        "Add 'aws' to unlock 1 additional job(s) in the pool.",
+        "Add 'docker' to unlock 2 additional job(s) in the pool.",
+        "Add 'kubernetes' to unlock 1 additional job(s) in the pool.",
+        "Add 'terraform' to unlock 1 additional job(s) in the pool.",
+        "Add 'python' to unlock 2 additional job(s) in the pool."
+      ],
+      "summary": "Weak match (score: 34%), driven by Salary Alignment (49%) and Education Requirement (32%), held back by Skill Match.",
+      "confidence": "medium",
+      "shortlist": false,
+      "shortlist_reason": "Score (0.34) below minimum threshold (0.65)",
+      "low_fit_warning": true,
+      "strengths": [
+        {
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.4926
+        },
+        {
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.3221
+        },
+        {
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.1853
+        }
+      ],
+      "weaknesses": [
+        {
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Experience Fit",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Coding Proficiency",
+          "value": 0.0,
+          "contribution": 0.0
+        },
+        {
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0
+        }
+      ],
+      "neutral": [],
+      "feature_contributions": [
+        {
+          "feature": "capped_salary_ratio",
+          "label": "Salary Alignment",
+          "value": 1.0,
+          "contribution": 0.4926,
+          "verdict": "strength"
+        },
+        {
+          "feature": "education_met",
+          "label": "Education Requirement",
+          "value": 1.0,
+          "contribution": 0.3221,
+          "verdict": "strength"
+        },
+        {
+          "feature": "communication_threshold_met",
+          "label": "Communication Proficiency",
+          "value": 1.0,
+          "contribution": 0.1853,
+          "verdict": "strength"
+        },
+        {
+          "feature": "skill_overlap_ratio",
+          "label": "Skill Match",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "norm_experience_gap",
+          "label": "Experience Fit",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "coding_threshold_met",
+          "label": "Coding Proficiency",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        },
+        {
+          "feature": "location_match",
+          "label": "Location Compatibility",
+          "value": 0.0,
+          "contribution": 0.0,
+          "verdict": "weakness"
+        }
+      ],
+      "factors_met": 2,
+      "factors_total": 4
+    }
+  ]
+}

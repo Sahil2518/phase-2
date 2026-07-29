@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PlaceMux Admin Console — Review Queue</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; padding: 2rem; }
+.header { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; }
+.header h1 { font-size: 1.5rem; color: #e2e8f0; font-weight: 600; }
+.stats { display: flex; gap: 1rem; }
+.stat-badge { background: #1e293b; border: 1px solid #475569; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem; color: #94a3b8; }
+.stat-badge strong { color: #f8fafc; font-size: 1rem; margin-left: 0.5rem; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; }
+.card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.card-header { padding: 1.25rem; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; }
+.match-title { font-size: 1.1rem; font-weight: 600; color: #f8fafc; }
+.match-subtitle { font-size: 0.875rem; color: #94a3b8; margin-top: 0.25rem; }
+.tier-badge { padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.25rem; }
+
+.card-body { padding: 1.25rem; flex: 1; }
+.narrative { font-size: 0.95rem; line-height: 1.5; color: #cbd5e1; margin-bottom: 1.5rem; background: #0f172a; padding: 1rem; border-radius: 8px; border-left: 4px solid #6366f1; }
+
+.section-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.75rem; font-weight: 600; }
+
+.feature-bar { margin-bottom: 0.75rem; }
+.feature-labels { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem; }
+.feature-name { color: #94a3b8; }
+.feature-val { font-weight: 600; }
+.track { width: 100%; background: #0f172a; height: 6px; border-radius: 3px; overflow: hidden; }
+.fill { height: 100%; border-radius: 3px; }
+
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+.skill-list { list-style: none; }
+.skill-list li { font-size: 0.85rem; padding: 0.25rem 0; display: flex; align-items: center; gap: 0.5rem; }
+.skill-present { color: #4ade80; }
+.skill-missing { color: #ef4444; }
+
+.upskilling { background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 8px; padding: 1rem; }
+.upskilling ul { list-style: none; margin-top: 0.5rem; }
+.upskilling li { font-size: 0.85rem; color: #a5b4fc; padding: 0.25rem 0; display: flex; align-items: flex-start; gap: 0.5rem; }
+.upskilling li::before { content: '💡'; font-size: 0.9rem; }
+
+.footer { text-align: center; margin-top: 3rem; font-size: 0.875rem; color: #64748b; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Admin Console — Review Queue</h1>
+    <p style="color: #94a3b8; font-size: 0.875rem; margin-top: 0.25rem;">Task 18 Explainability Report · Generated {timestamp}</p>
+  </div>
+  <div class="stats">
+    <div class="stat-badge">Total Matches Evaluated <strong>{total_matches}</strong></div>
+    <div class="stat-badge">Shortlisted <strong>{shortlisted_count}</strong></div>
+  </div>
+</div>
+
+<div class="grid">
+  {cards_html}
+</div>
+
+<div class="footer">
+  PlaceMux Phase 2 · Task 18 · Altrodav Technologies Pvt. Ltd.
+</div>
+
+</body>
+</html>
