@@ -1,0 +1,54 @@
+{
+    "timestamp": "2026-08-03T15:16:05.147780",
+    "ranker": {
+        "Gender": {
+            "selection_rates": {
+                "Female": 0.7601252609603341,
+                "Male": 0.7631578947368421,
+                "Non-Binary": 0.7630331753554502
+            },
+            "disparate_impact_ratios": {
+                "Female": 0.9960262040169894,
+                "Male": 1.0,
+                "Non-Binary": 0.9998365746036934
+            },
+            "min_disparate_impact": 0.9960262040169894,
+            "passed": true
+        },
+        "Ethnicity": {
+            "selection_rates": {
+                "Group_A": 0.7626373626373626,
+                "Group_B": 0.7652088128904966,
+                "Group_C": 0.7538382804503583
+            },
+            "disparate_impact_ratios": {
+                "Group_A": 0.9966395443834205,
+                "Group_B": 1.0,
+                "Group_C": 0.9851406148902189
+            },
+            "min_disparate_impact": 0.9851406148902189,
+            "passed": true
+        }
+    },
+    "proctor": {
+        "Gender": {
+            "false_positive_rates": {
+                "Female": 0.6385717755647315,
+                "Male": 0.6590577950461389,
+                "Non-Binary": 0.6836158192090396
+            },
+            "max_fpr_difference": 0.04504404364430803,
+            "passed": true
+        },
+        "Ethnicity": {
+            "false_positive_rates": {
+                "Group_A": 0.6562718175471259,
+                "Group_B": 0.6462480857580398,
+                "Group_C": 0.6410714285714286
+            },
+            "max_fpr_difference": 0.01520038897569731,
+            "passed": true
+        }
+    },
+    "overall_signoff": true
+}
