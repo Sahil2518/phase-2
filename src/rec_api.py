@@ -16,6 +16,7 @@ NumPy-style docstrings, random_state=42.
 import os
 import json
 import logging
+import time
 from contextlib import asynccontextmanager
 from typing import List, Optional
 
@@ -30,6 +31,7 @@ from src.recommender import (
     recommend_students_for_jobs,
     generate_rec_report,
 )
+from src.monitor import monitor
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -178,6 +180,7 @@ def api_jobs_for_cohort(req: CohortRecRequest):
     dict
         cohort_recommendations list, college_summary stats, timestamp.
     """
+    start_time = time.time()
     if _MODEL is None:
         raise HTTPException(status_code=503, detail="Model is currently unavailable.")
     try:
@@ -196,11 +199,25 @@ def api_jobs_for_cohort(req: CohortRecRequest):
             students=req.students, jobs=req.jobs,
             cohort_recommendations=cohort_rec, job_shortlists=job_shortlists,
         )
+        
+        # Track metric for score distribution
+        scores = []
+        for c in cohort_rec:
+            for j in c.get("recommended_jobs", []):
+                scores.append(j.get("score", 0.0))
+        monitor.record_prediction_scores(scores)
+        
+        latency_ms = (time.time() - start_time) * 1000
+        monitor.record_request(latency_ms, success=True)
         return report
 
     except ValueError as exc:
+        latency_ms = (time.time() - start_time) * 1000
+        monitor.record_request(latency_ms, success=False)
         raise HTTPException(status_code=422, detail=str(exc))
     except Exception as exc:
+        latency_ms = (time.time() - start_time) * 1000
+        monitor.record_request(latency_ms, success=False)
         logger.error(f"/recommend/jobs-for-cohort error: {exc}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal recommendation error.")
 
@@ -220,6 +237,7 @@ def api_students_for_job(req: JobShortlistRequest):
     dict
         job_id, top_candidates list, avg_candidate_score.
     """
+    start_time = time.time()
     if _MODEL is None:
         raise HTTPException(status_code=503, detail="Model is currently unavailable.")
     try:
@@ -228,11 +246,23 @@ def api_students_for_job(req: JobShortlistRequest):
         results = recommend_students_for_jobs(
             model=_MODEL, students=req.students, jobs=[req.job], top_k=req.top_k
         )
-        return results[0] if results else {"job_id": req.job.job_id, "top_candidates": []}
+        
+        res = results[0] if results else {"job_id": req.job.job_id, "top_candidates": []}
+        
+        scores = [c.get("score", 0.0) for c in res.get("top_candidates", [])]
+        monitor.record_prediction_scores(scores)
+        
+        latency_ms = (time.time() - start_time) * 1000
+        monitor.record_request(latency_ms, success=True)
+        return res
 
     except ValueError as exc:
+        latency_ms = (time.time() - start_time) * 1000
+        monitor.record_request(latency_ms, success=False)
         raise HTTPException(status_code=422, detail=str(exc))
     except Exception as exc:
+        latency_ms = (time.time() - start_time) * 1000
+        monitor.record_request(latency_ms, success=False)
         logger.error(f"/recommend/students-for-job error: {exc}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal shortlist error.")
 
@@ -274,3 +304,12 @@ def get_metrics():
         )
     with open(METRICS_PATH, "r") as f:
         return json.load(f)
+
+@app.get("/live-metrics", summary="Live Production Model Monitoring Metrics")
+def get_live_metrics():
+    """
+    Returns real-time telemetry from the ModelMonitor.
+    Used for live production observability (Task 25).
+    """
+    return monitor.get_metrics()
+
